@@ -7,6 +7,8 @@ import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -144,7 +146,7 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
 
         //loadUrl("http://localhost:12346/grafico.html?json=$estadoJson")
 
-        // Imagem e texto rolável
+        // Cor sólida como fundo e texto sobreposto
         Column(
             modifier = Modifier
                 .weight(0.25f)
@@ -153,32 +155,23 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
             Box(
                 modifier = Modifier
                     .fillMaxSize() // A Box vai ocupar todo o espaço disponível
+                    .background(color = androidx.compose.ui.graphics.Color(0xFF006400)) // Cor verde escuro (lousa)) // Cor sólida de fundo
+                    .border(width = 2.dp, color = androidx.compose.ui.graphics.Color.Black) // Borda preta ao redor
             ) {
-                // A imagem vai ocupar toda a largura e altura
-                Image(
-                    painter = painterResource(id = imagem2),
-                    contentDescription = "Imagem ao lado",
+                // O texto vai ser colocado sobre a cor sólida
+                Box(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .fillMaxHeight()
-                )
-
-                // O texto vai ser colocado sobre a imagem
-                LazyColumn(
-                    modifier = Modifier
-                        .fillMaxSize()
+                        .fillMaxSize()  // Preenche toda a Box
                         .align(Alignment.Center)  // Centraliza o texto
-                        .padding(16.dp)  // Ajuste de padding para o texto
                 ) {
-                    item {
-                        Text(
-                            text = textoRolavel,
-                            color = androidx.compose.ui.graphics.Color.Black,  // Texto branco para contraste
-                            style = androidx.compose.ui.text.TextStyle(
-                                fontSize = 18.sp  // Definindo o tamanho do texto em sp
-                            )
-                        )
-                    }
+                    Text(
+                        text = textoRolavel,
+                        color = androidx.compose.ui.graphics.Color.White,  // Texto com cor preta
+                        style = androidx.compose.ui.text.TextStyle(
+                            fontSize = 18.sp  // Tamanho do texto em sp
+                        ),
+                        modifier = Modifier.align(Alignment.Center)  // Garantir centralização
+                    )
                 }
             }
         }
