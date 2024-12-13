@@ -125,13 +125,20 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
                 settings.javaScriptEnabled = true
                 settings.domStorageEnabled = true
                 settings.loadWithOverviewMode = true
-                settings.useWideViewPort = true // Ajuste automático da largura
-                settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING // Ajusta o layout automaticamente
-                WebView.setWebContentsDebuggingEnabled(true) // Habilita depuração
+                settings.useWideViewPort = true
+                settings.allowFileAccess = true
+                settings.allowContentAccess = true
+                settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING
                 webViewClient = WebViewClient()
+                layoutParams = android.widget.LinearLayout.LayoutParams( //ERA ISSO QUE FALTAVA (?)
+                    android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
+                    android.widget.LinearLayout.LayoutParams.MATCH_PARENT
+                ) // Força largura/altura adequadas  //ERA ISSO QUE FALTAVA (?)
                 loadUrl("http://localhost:12346/grafico.html?json=$estadoJson")
             }
-        }, modifier = Modifier.fillMaxSize())
+        }, modifier = Modifier
+            .weight(0.75f)
+            .fillMaxHeight())  // Garantia explícita da altura
 
 
         //loadUrl("http://localhost:12346/grafico.html?json=$estadoJson")

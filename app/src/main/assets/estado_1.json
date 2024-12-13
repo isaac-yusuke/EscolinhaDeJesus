@@ -1,17 +1,344 @@
 {
-  "version": 10,
+  "version": 11,
+  "randomSeed": "698961acbeeef003b205872858e12ca9",
   "graph": {
     "viewport": {
-      "xmin": -10,
-      "xmax": 10,
-      "ymin": -10,
-      "ymax": 10
-    }
+      "xmin": -4.982849823729196,
+      "ymin": -1.980874074673213,
+      "xmax": 5.222990071553947,
+      "ymax": 6.365592410843682
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false,
+    "xAxisMinorSubdivisions": 1,
+    "yAxisMinorSubdivisions": 1,
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false
   },
   "expressions": {
     "list": [
-      { "id": "1", "latex": "y=x^2" },
-      { "id": "2", "latex": "y=\\sin(x)" }
+      {
+        "type": "text",
+        "id": "108",
+        "text": "No princípio Deus criou os céus e a terra.\n\nGênesis 1:1"
+      },
+      {
+        "type": "expression",
+        "id": "370",
+        "color": "#c74440",
+        "latex": "D_{ia}=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 20000,
+          "loopMode": "PLAY_ONCE",
+          "min": "0",
+          "max": "7"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "404",
+        "color": "#000000",
+        "latex": "x=\\left[2,2.5,3,3.5\\right]\\left\\{y>3\\right\\}\\left\\{y<3.5\\right\\}\\left\\{D_{ia}=7\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "405",
+        "color": "#000000",
+        "latex": "y=\\left[3,3.25,3.5\\right]\\left\\{D_{ia}=7\\right\\}\\left\\{\\left(x-\\left[2.,2,2\\right]\\right)\\left(x-\\left[2,2.25,2.25\\right]\\right)\\left(\\left(x-\\left[2.5,2.5,2.5\\right]\\right)\\left(x-\\left[2.75,2.75,2.75\\right]\\right)\\left(x-\\left[3,3,3\\right]\\right)\\left(x-\\left[3.25,3.,3.\\right]\\right)\\left(x-\\left[3.75,3.,3.75\\right]\\right)\\left(x-\\left[4,3.,4.\\right]\\right)\\right)<0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "406",
+        "color": "#000000",
+        "latex": "y=2x-4.5\\left\\{\\left|y-3.25\\right|<.25\\right\\}\\left\\{D_{ia}=7\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "410",
+        "color": "#000000",
+        "latex": "y=2.75\\left\\{\\left|x-\\left[2.5,3.5\\right]\\right|<.1\\right\\}\\left\\{D_{ia}=7\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "409",
+        "color": "#000000",
+        "latex": "y=\\left[4,-4,4,-4\\right]x-\\left[7,-13,11,-17\\right]\\left\\{\\left|y-2.75\\right|<.25\\right\\}\\left\\{D_{ia}=7\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "408",
+        "color": "#000000",
+        "latex": "x=\\left[\\frac{\\sin\\left(\\frac{2\\pi}{.5}y\\right)}{9}+2,3,4\\right]\\left\\{D_{ia}=7\\right\\}\\left\\{\\left|y-2.75\\right|<.25\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "411",
+        "color": "#000000",
+        "latex": "\\left\\{D_{ia}=7\\right\\}\\left(\\frac{\\left(x-\\left[3,3,4,4.5\\right]\\right)}{\\left[.25,.25,.25,.125\\right]}\\right)^{2}+\\left(\\frac{\\left(y-\\left[2.625,2.875,2.75,2.75\\right]\\right)}{\\left[.125,.125,.25,.25\\right]}\\right)^{2}=1^{2}\\left\\{x>\\left[3,3,4,0\\right]\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "398",
+        "color": "#c74440",
+        "latex": "x^{2}+y^{2}\\le6.5^{2}\\left\\{x^{2}+y^{2}>6^{2}\\right\\}\\left\\{y<12\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>1\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "400",
+        "color": "#2d70b3",
+        "latex": "x^{2}+y^{2}\\le6^{2}\\left\\{x^{2}+y^{2}>5.5^{2}\\right\\}\\left\\{y<12\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}\\left\\{y>1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "399",
+        "color": "#388c46",
+        "latex": "x^{2}+y^{2}\\le5.5^{2}\\left\\{x^{2}+y^{2}>5^{2}\\right\\}\\left\\{y<12\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}\\left\\{y>1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "401",
+        "color": "#6042a6",
+        "latex": "x^{2}+y^{2}\\le5^{2}\\left\\{x^{2}+y^{2}>4.5^{2}\\right\\}\\left\\{y<12\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>h_{2}\\left(x\\right)\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "394",
+        "color": "#000000",
+        "latex": "\\left(x-\\left[2.667,3.5\\right]\\right)^{2}+\\left(y-2.125\\right)^{2}\\left\\{y-3\\le6\\left(D_{ia}-6.35\\right)\\right\\}=\\left(.125\\right)^{2}"
+      },
+      {
+        "type": "expression",
+        "id": "393",
+        "color": "#000000",
+        "latex": "x=\\left[2.667,3.5\\right]\\left\\{y>1.5\\right\\}\\left\\{y-2\\le6\\left(D_{ia}-6.2\\right)\\right\\}\\left\\{y<2.\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "392",
+        "color": "#000000",
+        "latex": "y=\\left[5,-5,6,-6\\right]x-\\left[11.8,-14.9,19.5,-22.5\\right]\\left\\{y>.96\\right\\}\\left\\{y-1\\le6\\left(D_{ia}-6\\right)\\left\\{y\\le1.5\\right\\}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "395",
+        "color": "#000000",
+        "latex": "y=\\left(\\left|x-\\left[2.667,3.5\\right]\\right|\\right)+1.75\\left\\{y-1.75<6\\left(D_{ia}-6.17\\right)\\right\\}\\left\\{y<2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "388",
+        "color": "#000000",
+        "latex": "y=\\frac{\\arctan\\left(500\\left(x-\\left[-2,-3\\right]\\right)^{2}\\right)}{5}-4j\\left(4.8\\right)+2.5\\left\\{\\left|x+\\left[2,3\\right]\\right|<.3\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "389",
+        "color": "#000000",
+        "latex": "\\left(\\frac{\\left(x+3\\right)}{.5}\\right)^{2}+\\left(\\frac{\\left(y+.75-2j\\left(5\\right)\\right)}{.25}\\right)^{2}\\left\\{x+3.4>-\\left|2\\left(y+.75-2j\\left(5\\right)\\right)\\right|\\right\\}=1\\left\\{y<f\\left(y\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "390",
+        "color": "#000000",
+        "latex": "x+3.4=-\\left|2\\left(y+.75-2j\\left(5\\right)\\right)\\right|\\left\\{y<f\\left(y\\right)\\right\\}\\left\\{x>-3.9\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "391",
+        "color": "#000000",
+        "latex": "x=-3.8887\\left\\{y<f\\left(y\\right)\\right\\}\\left\\{\\left|\\frac{\\left(y+.75-2j\\left(5\\right)\\right)}{.25}\\right|<1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "374",
+        "color": "#388c46",
+        "latex": "g\\left(y\\right)=-\\ln\\left(-3y+3\\right)+11j\\left(3\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#2d70b3",
+        "latex": "f\\left(x\\right)=\\frac{\\left(\\frac{\\sin\\left(wx_{mar}+c\\right)}{2}\\right)}{10}\\left\\{\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "371",
+        "color": "#000000",
+        "latex": "y^{2}>-1\\left\\{x^{2}+y^{2}\\ge8^{2}D_{ia}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "107",
+        "color": "#c74440",
+        "latex": "x_{mar}=\\cos\\left(x\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#6042a6",
+        "latex": "w=1.883",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 2000,
+          "isPlaying": true,
+          "min": "1",
+          "max": "2"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#c74440",
+        "latex": "c=4.686",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "loopMode": "LOOP_FORWARD",
+          "isPlaying": true,
+          "min": "0",
+          "max": "2\\pi"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "color": "#2d70b3",
+        "latex": "y\\le f\\left(x\\right)\\left\\{x<g\\left(y\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "376",
+        "color": "#388c46",
+        "latex": "x\\ge g\\left(y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "133",
+        "color": "#000000",
+        "latex": "\\left(\\frac{\\left(x-a\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}=\\frac{1}{5}\\left\\{\\left(\\frac{\\left(x-a-.5\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}>\\frac{1}{5}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "134",
+        "color": "#000000",
+        "latex": "\\left(\\frac{\\left(x-a-.5\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}=\\frac{1}{5}\\left\\{\\left(\\frac{\\left(x-a\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}>\\frac{1}{5}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "384",
+        "color": "#000000",
+        "latex": "\\left(\\frac{\\left(x+a\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}=\\frac{1}{5}\\left\\{\\left(\\frac{\\left(x+a-.5\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}>\\frac{1}{5}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "383",
+        "color": "#000000",
+        "latex": "\\left(\\frac{\\left(x+a-.5\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}=\\frac{1}{5}\\left\\{\\left(\\frac{\\left(x+a\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}>\\frac{1}{5}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "386",
+        "color": "#000000",
+        "latex": "\\left(\\frac{\\left(x\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}=\\frac{1}{5}\\left\\{\\left(\\frac{\\left(x-.5\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}>\\frac{1}{5}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "385",
+        "color": "#000000",
+        "latex": "\\left(\\frac{\\left(x-.5\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}=\\frac{1}{5}\\left\\{\\left(\\frac{\\left(x\\right)}{2}\\right)^{2}+\\left(\\frac{\\left(y-4-3i\\left(2,D_{ia}\\right)\\right)}{1}\\right)^{2}>\\frac{1}{5}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "139",
+        "color": "#fa7e19",
+        "latex": "\\left(x\\right)^{2}+\\left(y-3-4j\\left(4\\right)\\right)^{2}\\le\\left(\\frac{1}{2}\\right)^{2}\\left\\{D_{ia}>3.5\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "140",
+        "color": "#fa7e19",
+        "latex": "y+2j\\left(4\\right)=x+3\\left\\{\\left(x\\right)^{2}+\\left(y-3\\right)^{2}\\ge\\left(\\frac{3}{4}\\right)^{2}\\right\\}\\left\\{\\left(x\\right)^{2}+\\left(y-3\\right)^{2}\\le\\left(\\frac{5}{4}\\right)^{2}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "141",
+        "color": "#fa7e19",
+        "latex": "y+2j\\left(4\\right)=-x+3\\left\\{\\left(x\\right)^{2}+\\left(y-3\\right)^{2}\\ge\\left(\\frac{3}{4}\\right)^{2}\\right\\}\\left\\{\\left(x\\right)^{2}+\\left(y-3\\right)^{2}\\le\\left(\\frac{5}{4}\\right)^{2}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "142",
+        "color": "#fa7e19",
+        "latex": "y+2j\\left(4\\right)=3\\left\\{\\left(x\\right)^{2}+\\left(y-3\\right)^{2}\\ge\\left(\\frac{3}{4}\\right)^{2}\\right\\}\\left\\{\\left(x\\right)^{2}+\\left(y-3\\right)^{2}\\le\\left(\\frac{5}{4}\\right)^{2}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "377",
+        "color": "#c74440",
+        "latex": "h\\left(x\\right)=1-e^{-e^{8x}}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "378",
+        "color": "#c74440",
+        "latex": "i\\left(z,x\\right)=h\\left(-\\left(x-z\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "387",
+        "color": "#c74440",
+        "latex": "j\\left(u\\right)=i\\left(u,D_{ia}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "144",
+        "color": "#2d70b3",
+        "latex": "t=1.3",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 2000,
+          "playDirection": -1,
+          "isPlaying": true,
+          "min": "0",
+          "max": "12"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "128",
+        "color": "#000000",
+        "latex": "a=-3.419",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 2666.6666666666665,
+          "min": "-4",
+          "max": "-3"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "402",
+        "color": "#2d70b3",
+        "latex": "h_{2}\\left(x\\right)=\\frac{\\left(\\operatorname{sign}\\left(x\\right)+1\\right)}{2}",
+        "hidden": true
+      }
     ]
-  }
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
 }
