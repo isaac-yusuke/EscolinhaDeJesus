@@ -1,7 +1,9 @@
 package com.example.escolinhadejesus
 
 import android.os.Bundle
+import android.webkit.WebSettings
 import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -26,6 +28,8 @@ import coil.compose.rememberImagePainter
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 
 
 class MainActivity : ComponentActivity() {
@@ -105,15 +109,13 @@ fun Tela2(listaDeBotoes: List<String>, onBotaoClick: (Int) -> Unit) {
 fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
     val context = LocalContext.current
 
-    // Inicializar o servidor local usando remember
+    // Inicializar o servidor local
     val server = remember { LocalWebServer(context) }
-    LaunchedEffect(Unit) {
+    DisposableEffect(Unit) {
         server.start()
-        /*
-        awaitDispose {
-            server.stop() // Certifique-se de que o servidor seja encerrado
+        onDispose {
+            server.stop() // Garante que o servidor será encerrado
         }
-         */
     }
 
     Row(modifier = Modifier.fillMaxSize()) {
@@ -122,9 +124,17 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
             WebView(context).apply {
                 settings.javaScriptEnabled = true
                 settings.domStorageEnabled = true
+                settings.loadWithOverviewMode = true
+                settings.useWideViewPort = true // Ajuste automático da largura
+                settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING // Ajusta o layout automaticamente
+                WebView.setWebContentsDebuggingEnabled(true) // Habilita depuração
+                webViewClient = WebViewClient()
                 loadUrl("http://localhost:12346/grafico.html?json=$estadoJson")
             }
-        }, modifier = Modifier.weight(0.75f))
+        }, modifier = Modifier.fillMaxSize())
+
+
+        //loadUrl("http://localhost:12346/grafico.html?json=$estadoJson")
 
         // Imagem e texto rolável
         Column(
@@ -150,6 +160,7 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
         }
     }
 }
+
 
 
 @Preview(showBackground = true)
