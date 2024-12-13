@@ -30,6 +30,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.ui.unit.sp
 
 
 class MainActivity : ComponentActivity() {
@@ -149,19 +150,35 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
                 .weight(0.25f)
                 .fillMaxHeight()
         ) {
-            Image(
-                painter = painterResource(id = imagem2),
-                contentDescription = "Imagem ao lado",
+            Box(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(150.dp)
-            )
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(16.dp)
+                    .fillMaxSize() // A Box vai ocupar todo o espaço disponível
             ) {
-                item {
-                    Text(text = textoRolavel)
+                // A imagem vai ocupar toda a largura e altura
+                Image(
+                    painter = painterResource(id = imagem2),
+                    contentDescription = "Imagem ao lado",
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxHeight()
+                )
+
+                // O texto vai ser colocado sobre a imagem
+                LazyColumn(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .align(Alignment.Center)  // Centraliza o texto
+                        .padding(16.dp)  // Ajuste de padding para o texto
+                ) {
+                    item {
+                        Text(
+                            text = textoRolavel,
+                            color = androidx.compose.ui.graphics.Color.Black,  // Texto branco para contraste
+                            style = androidx.compose.ui.text.TextStyle(
+                                fontSize = 18.sp  // Definindo o tamanho do texto em sp
+                            )
+                        )
+                    }
                 }
             }
         }
