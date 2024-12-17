@@ -18,20 +18,20 @@ val graficos = listOf(
             
             Golias era um gigante muito forte, mas Davi tinha a arma mais poderosa de todas: a confiança em Deus!
             Toque no Davi para ver como ele venceu Golias
-            teste
-            teste2
-            teste3
         """.trimIndent(), // Remove a indentação desnecessária
-        arquivoJson = "DavieGolias.json"
+        arquivoJson = "DaviEGolias.json"
     ),
     GraficoData(
-        titulo = "Gráfico 2",
+        titulo = "Jesus Acalma a Tempestade",
         texto = """
-            Este é o texto do Gráfico 2.
-            Ele pode conter múltiplas linhas,
-            incluindo explicações detalhadas.
+            Jesus Acalma a Tempestade
+            
+            Texto bíblico: Marcos 4:35-41
+            
+            Os discípulos estavam com muito medo por causa da tempestade no mar, mas então eles lembraram que Jesus estava ali no barco dormindo!
+            Toque no mar para ver o que aconteceu quando Jesus disse "Silêncio!"            
         """.trimIndent(),
-        arquivoJson = "estado_2.json"
+        arquivoJson = "JesusAcalmaATempestade.json"
     ),
     GraficoData(
         titulo = "Gráfico 3",
@@ -40,7 +40,7 @@ val graficos = listOf(
             Podemos usar várias linhas para fornecer mais informações
             sobre o conteúdo e contexto do gráfico.
         """.trimIndent(),
-        arquivoJson = "estado_3.json"
+        arquivoJson = ".json"
     ),
     GraficoData(
         titulo = "Gráfico 4",
@@ -49,6 +49,6 @@ val graficos = listOf(
             Ele é baseado em um conjunto de dados específicos
             que demonstram conceitos de maneira visual.
         """.trimIndent(),
-        arquivoJson = "estado_4.json"
+        arquivoJson = ".json"
     )
 )
