@@ -6,6 +6,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -14,6 +15,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -32,6 +34,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.sp
 
 
@@ -83,9 +87,18 @@ fun Tela1(onIniciarClick: () -> Unit) {
         )
         Button(
             onClick = onIniciarClick,
+            shape = RectangleShape, // Botão quadrado
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFF2E7D32), // Cor verde
+                contentColor = Color.White // Cor do texto
+            ),
+            border = BorderStroke(2.dp, Color.Black), // Contorno preto
             modifier = Modifier.align(Alignment.Center)
         ) {
-            Text(text = "Iniciar")
+            Text(
+                text = "Iniciar",
+                fontSize = 30.sp // Tamanho da fonte
+            )
         }
     }
 }
@@ -93,19 +106,42 @@ fun Tela1(onIniciarClick: () -> Unit) {
 @Composable
 fun Tela2(listaDeBotoes: List<String>, onBotaoClick: (Int) -> Unit) {
     Box(modifier = Modifier.fillMaxSize()) {
+        // Imagem de fundo
         Image(
             painter = rememberImagePainter(R.drawable.imagem1),
             contentDescription = "Fundo",
             modifier = Modifier.fillMaxSize()
         )
-        LazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(16.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
+
+        // Centralização da LazyColumn
+        Box(
+            modifier = Modifier
+                .fillMaxSize(),
+            contentAlignment = Alignment.Center // Centraliza o LazyColumn no meio da tela
         ) {
-            itemsIndexed(listaDeBotoes) { index, texto ->
-                Button(onClick = { onBotaoClick(index + 1) }) {
-                    Text(text = texto)
+            LazyColumn(
+                modifier = Modifier
+                    .width(200.dp), // Define largura fixa para os botões
+                verticalArrangement = Arrangement.spacedBy(8.dp) // Espaçamento vertical
+            ) {
+                itemsIndexed(listaDeBotoes) { index, texto ->
+                    Button(
+                        onClick = { onBotaoClick(index + 1) },
+                        shape = RectangleShape, // Botões com formato quadrado
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF2E7D32), // Cor verde
+                            contentColor = Color.White // Cor do texto
+                        ),
+                        border = BorderStroke(2.dp, Color.Black), // Contorno preto
+                        modifier = Modifier
+                            .fillMaxWidth() // Ocupa a largura definida pelo LazyColumn
+                            .padding(horizontal = 8.dp) // Padding horizontal
+                    ) {
+                        Text(
+                            text = texto,
+                            fontSize = 18.sp // Tamanho da fonte
+                        )
+                    }
                 }
             }
         }
