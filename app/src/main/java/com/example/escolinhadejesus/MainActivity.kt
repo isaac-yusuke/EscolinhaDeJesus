@@ -38,6 +38,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.*
 
@@ -153,7 +154,8 @@ fun Tela2(listaDeBotoes: List<String>, onBotaoClick: (Int) -> Unit) {
                     ) {
                         Text(
                             text = texto,
-                            fontSize = 18.sp // Tamanho da fonte
+                            fontSize = 18.sp, // Tamanho da fonte
+                            textAlign = TextAlign.Center
                         )
                     }
                 }
