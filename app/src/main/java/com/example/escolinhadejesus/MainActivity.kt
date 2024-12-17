@@ -13,7 +13,9 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.BasicText
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
@@ -217,7 +219,8 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
                 modifier = Modifier
                     .fillMaxSize()
                     .background(color = Color(0xFF2E7D32)) // Cor verde escuro (lousa)
-                    .border(width = 3.dp, color = Color.Black),
+                    .border(width = 3.dp, color = Color.Black)
+                    .verticalScroll(rememberScrollState()), // Adiciona rolagem vertical
                 contentAlignment = Alignment.Center
             ) {
                 Text(
