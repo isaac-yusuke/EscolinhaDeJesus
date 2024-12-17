@@ -79,7 +79,12 @@ fun EscolinhaApp() {
 
 @Composable
 fun Tela1(onIniciarClick: () -> Unit) {
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = Color(0xFF2E7D32)) // Cor verde escuro de fundo
+    ) {
+        // Imagem de fundo
         Image(
             painter = rememberImagePainter(R.drawable.imagem1),
             contentDescription = "Fundo",
@@ -105,7 +110,11 @@ fun Tela1(onIniciarClick: () -> Unit) {
 
 @Composable
 fun Tela2(listaDeBotoes: List<String>, onBotaoClick: (Int) -> Unit) {
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = Color(0xFF2E7D32)) // Cor verde escuro de fundo
+    ) {
         // Imagem de fundo
         Image(
             painter = rememberImagePainter(R.drawable.imagem1),
