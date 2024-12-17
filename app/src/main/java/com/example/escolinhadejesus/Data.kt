@@ -56,5 +56,17 @@ val graficos = listOf(
             Toque na fornalha para ver o que aconteceu.
         """.trimIndent(),
         arquivoJson = "SadraqueMesaqueEAbedenego.json"
+    ),
+    GraficoData(
+        titulo = "A Mulher de Ló",
+        texto = """
+            A Mulher de Ló
+            
+            Texto Bíblico: Gênesis 19
+            
+            Deus destruiu as cidades de Sodoma e Gomorra porque as pessoas de lá eram más. Ló e sua família deveriam fugir sem olhar para trás, mas a mulher de Ló olhou!
+            Toque na família de Ló e acompanhe eles para ver o que aconteceu.
+        """.trimIndent(),
+        arquivoJson = "AMulherDeLo.json"
     )
 )
