@@ -34,10 +34,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.*
 
 
 class MainActivity : ComponentActivity() {
@@ -163,44 +167,47 @@ fun Tela2(listaDeBotoes: List<String>, onBotaoClick: (Int) -> Unit) {
 @Composable
 fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
     val context = LocalContext.current
-
-    // Inicializar o servidor local
     val server = remember { LocalWebServer(context) }
-    DisposableEffect(Unit) {
-        if (!server.isAlive) { // Verifica se o servidor já está ativo
-            server.start()
-            while (!server.isAlive) { // Aguarda até que o servidor esteja pronto
-                Thread.sleep(100)
+    var isServerReady by remember { mutableStateOf(false) } // Estado para controlar a inicialização do servidor
+
+    // Inicializa o servidor de forma assíncrona
+    LaunchedEffect(Unit) {
+        withContext(Dispatchers.IO) {
+            if (!server.isAlive) {
+                server.start()
+                while (!server.isAlive) {
+                    delay(100) // Aguarda de forma assíncrona sem bloquear a UI
+                }
             }
-        }
-        onDispose {
-            server.stop() // Garante que o servidor será encerrado
+            isServerReady = true // Marca o servidor como pronto
         }
     }
 
     Row(modifier = Modifier.fillMaxSize()) {
         // WebView para exibir o gráfico
-        AndroidView(factory = { context ->
-            WebView(context).apply {
-                settings.javaScriptEnabled = true
-                settings.domStorageEnabled = true
-                settings.loadWithOverviewMode = true
-                settings.useWideViewPort = true
-                settings.allowFileAccess = true
-                settings.allowContentAccess = true
-                settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING
-                webViewClient = WebViewClient()
-                layoutParams = android.widget.LinearLayout.LayoutParams( // ERA ISSO QUE FALTAVA (?)
-                    android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
-                    android.widget.LinearLayout.LayoutParams.MATCH_PARENT
-                ) // Força largura/altura adequadas
-                loadUrl("http://localhost:12346/grafico.html?json=$estadoJson")
-            }
-        }, modifier = Modifier
-            .weight(0.75f)
-            .fillMaxHeight()) // Garantia explícita da altura
+        if (isServerReady) { // Carrega a WebView apenas quando o servidor estiver pronto
+            AndroidView(factory = { context ->
+                WebView(context).apply {
+                    settings.javaScriptEnabled = true
+                    settings.domStorageEnabled = true
+                    settings.loadWithOverviewMode = true
+                    settings.useWideViewPort = true
+                    settings.allowFileAccess = true
+                    settings.allowContentAccess = true
+                    settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING
+                    webViewClient = WebViewClient()
+                    layoutParams = android.widget.LinearLayout.LayoutParams(
+                        android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
+                        android.widget.LinearLayout.LayoutParams.MATCH_PARENT
+                    )
+                    loadUrl("http://localhost:12346/grafico.html?json=$estadoJson")
+                }
+            }, modifier = Modifier
+                .weight(0.75f)
+                .fillMaxHeight())
+        }
 
-        // Cor sólida como fundo e texto sobreposto
+        // Parte direita com cor sólida e texto
         Column(
             modifier = Modifier
                 .weight(0.25f)
@@ -208,24 +215,28 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
         ) {
             Box(
                 modifier = Modifier
-                    .fillMaxSize() // A Box vai ocupar todo o espaço disponível
-                    .background(color = androidx.compose.ui.graphics.Color(0xFF2E7D32)) // Cor verde escuro (lousa)
-                    .border(width = 3.dp, color = androidx.compose.ui.graphics.Color.Black), // Borda preta ao redor
-                contentAlignment = Alignment.Center // Centraliza o conteúdo horizontal e verticalmente
+                    .fillMaxSize()
+                    .background(color = Color(0xFF2E7D32)) // Cor verde escuro (lousa)
+                    .border(width = 3.dp, color = Color.Black),
+                contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = textoRolavel,
-                    color = androidx.compose.ui.graphics.Color.White, // Cor branca para o texto
-                    style = androidx.compose.ui.text.TextStyle(
-                        fontSize = 18.sp // Tamanho do texto em sp
-                    ),
-                    modifier = Modifier.padding(8.dp) // Adiciona um espaçamento interno para o texto
+                    color = Color.White,
+                    fontSize = 18.sp,
+                    modifier = Modifier.padding(8.dp)
                 )
             }
         }
     }
-}
 
+    // Stop the server when leaving the composable
+    DisposableEffect(Unit) {
+        onDispose {
+            server.stop()
+        }
+    }
+}
 
 
 @Preview(showBackground = true)
