@@ -53,21 +53,25 @@ fun EscolinhaApp() {
             Tela1(onIniciarClick = { navController.navigate("tela2") })
         }
         composable("tela2") {
-            val listaDeBotoes = listOf("Gráfico 1", "Gráfico 2", "Gráfico 3")
-            Tela2(listaDeBotoes = listaDeBotoes) { index ->
-                navController.navigate("grafico/$index")
-            }
+            // Obtém os títulos dos gráficos do arquivo Data.kt
+            Tela2(
+                listaDeBotoes = graficos.map { it.titulo },
+                onBotaoClick = { index -> navController.navigate("grafico/${index - 1}") }
+            )
         }
         composable("grafico/{index}") { backStackEntry ->
-            val index = backStackEntry.arguments?.getString("index")?.toIntOrNull() ?: 1
+            val index = backStackEntry.arguments?.getString("index")?.toIntOrNull() ?: 0
+            // Obtém os dados do gráfico correspondente de Data.kt
+            val grafico = graficos.getOrNull(index)
             TelaGraficoI(
-                estadoJson = "estado_$index.json",
-                imagem2 = R.drawable.imagem2,
-                textoRolavel = "Texto relacionado ao Gráfico $index"
+                estadoJson = grafico?.arquivoJson ?: "arquivo_padrao.json",
+                imagem2 = R.drawable.imagem2, // Mantém a imagem existente
+                textoRolavel = grafico?.texto ?: "Texto padrão"
             )
         }
     }
 }
+
 
 @Composable
 fun Tela1(onIniciarClick: () -> Unit) {
