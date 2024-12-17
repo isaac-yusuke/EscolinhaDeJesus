@@ -167,7 +167,12 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
     // Inicializar o servidor local
     val server = remember { LocalWebServer(context) }
     DisposableEffect(Unit) {
-        server.start()
+        if (!server.isAlive) { // Verifica se o servidor já está ativo
+            server.start()
+            while (!server.isAlive) { // Aguarda até que o servidor esteja pronto
+                Thread.sleep(100)
+            }
+        }
         onDispose {
             server.stop() // Garante que o servidor será encerrado
         }
@@ -185,18 +190,15 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
                 settings.allowContentAccess = true
                 settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING
                 webViewClient = WebViewClient()
-                layoutParams = android.widget.LinearLayout.LayoutParams( //ERA ISSO QUE FALTAVA (?)
+                layoutParams = android.widget.LinearLayout.LayoutParams( // ERA ISSO QUE FALTAVA (?)
                     android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
                     android.widget.LinearLayout.LayoutParams.MATCH_PARENT
-                ) // Força largura/altura adequadas  //ERA ISSO QUE FALTAVA (?)
+                ) // Força largura/altura adequadas
                 loadUrl("http://localhost:12346/grafico.html?json=$estadoJson")
             }
         }, modifier = Modifier
             .weight(0.75f)
-            .fillMaxHeight())  // Garantia explícita da altura
-
-
-        //loadUrl("http://localhost:12346/grafico.html?json=$estadoJson")
+            .fillMaxHeight()) // Garantia explícita da altura
 
         // Cor sólida como fundo e texto sobreposto
         Column(
