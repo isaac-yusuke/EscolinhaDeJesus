@@ -223,7 +223,7 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
                 Text(
                     text = textoRolavel,
                     color = Color.White,
-                    fontSize = 18.sp,
+                    fontSize = 20.sp,
                     modifier = Modifier.padding(8.dp)
                 )
             }
