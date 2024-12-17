@@ -92,7 +92,7 @@ fun Tela1(onIniciarClick: () -> Unit) {
                 containerColor = Color(0xFF2E7D32), // Cor verde
                 contentColor = Color.White // Cor do texto
             ),
-            border = BorderStroke(2.dp, Color.Black), // Contorno preto
+            border = BorderStroke(3.dp, Color.Black), // Contorno preto
             modifier = Modifier.align(Alignment.Center)
         ) {
             Text(
@@ -132,7 +132,7 @@ fun Tela2(listaDeBotoes: List<String>, onBotaoClick: (Int) -> Unit) {
                             containerColor = Color(0xFF2E7D32), // Cor verde
                             contentColor = Color.White // Cor do texto
                         ),
-                        border = BorderStroke(2.dp, Color.Black), // Contorno preto
+                        border = BorderStroke(3.dp, Color.Black), // Contorno preto
                         modifier = Modifier
                             .fillMaxWidth() // Ocupa a largura definida pelo LazyColumn
                             .padding(horizontal = 8.dp) // Padding horizontal
@@ -195,24 +195,18 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
             Box(
                 modifier = Modifier
                     .fillMaxSize() // A Box vai ocupar todo o espaço disponível
-                    .background(color = androidx.compose.ui.graphics.Color(0xFF006400)) // Cor verde escuro (lousa)) // Cor sólida de fundo
-                    .border(width = 2.dp, color = androidx.compose.ui.graphics.Color.Black) // Borda preta ao redor
+                    .background(color = androidx.compose.ui.graphics.Color(0xFF2E7D32)) // Cor verde escuro (lousa)
+                    .border(width = 3.dp, color = androidx.compose.ui.graphics.Color.Black), // Borda preta ao redor
+                contentAlignment = Alignment.Center // Centraliza o conteúdo horizontal e verticalmente
             ) {
-                // O texto vai ser colocado sobre a cor sólida
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()  // Preenche toda a Box
-                        .align(Alignment.Center)  // Centraliza o texto
-                ) {
-                    Text(
-                        text = textoRolavel,
-                        color = androidx.compose.ui.graphics.Color.White,  // Texto com cor preta
-                        style = androidx.compose.ui.text.TextStyle(
-                            fontSize = 18.sp  // Tamanho do texto em sp
-                        ),
-                        modifier = Modifier.align(Alignment.Center)  // Garantir centralização
-                    )
-                }
+                Text(
+                    text = textoRolavel,
+                    color = androidx.compose.ui.graphics.Color.White, // Cor branca para o texto
+                    style = androidx.compose.ui.text.TextStyle(
+                        fontSize = 18.sp // Tamanho do texto em sp
+                    ),
+                    modifier = Modifier.padding(8.dp) // Adiciona um espaçamento interno para o texto
+                )
             }
         }
     }
