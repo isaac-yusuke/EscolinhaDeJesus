@@ -34,13 +34,16 @@ val graficos = listOf(
         arquivoJson = "JesusAcalmaATempestade.json"
     ),
     GraficoData(
-        titulo = "Gráfico 3",
+        titulo = "O Sonho de Jacó",
         texto = """
-            Aqui está um texto relacionado ao Gráfico 3.
-            Podemos usar várias linhas para fornecer mais informações
-            sobre o conteúdo e contexto do gráfico.
+            O Sonho de Jacó
+            
+            Texto bíblico: Gênesis 28
+            
+            Quando Jacó saiu de casa fugindo de seu irmão, ele dormiu e teve um sonho. Nesse sonho, ele viu uma escada que ia até o Céu, e os anjos subiam e desciam por ela.
+            Essa escada representa Jesus, que faz a ponte entre nós e Deus!
         """.trimIndent(),
-        arquivoJson = ".json"
+        arquivoJson = "SonhoDeJaco.json"
     ),
     GraficoData(
         titulo = "Gráfico 4",
