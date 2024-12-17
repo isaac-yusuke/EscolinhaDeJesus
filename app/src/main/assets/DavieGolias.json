@@ -4,9 +4,9 @@
   "graph": {
     "viewport": {
       "xmin": -77.71348497185087,
-      "ymin": -96.52675202338853,
+      "ymin": -76.63445558371066,
       "xmax": 186.38304260566375,
-      "ymax": 188.45453561145317
+      "ymax": 168.5622391717753
     },
     "showGrid": false,
     "showYAxis": false,
@@ -80,7 +80,7 @@
         "id": "63",
         "folderId": "58",
         "color": "#c74440",
-        "latex": "c_{lock1}=D_{aviEGolias}\\to\\min\\left(138,D_{aviEGolias}+2\\right)"
+        "latex": "c_{lock1}=D_{aviEGolias}\\to\\min\\left(138,D_{aviEGolias}+3\\right)"
       },
       {
         "type": "expression",
@@ -447,7 +447,7 @@
         "type": "expression",
         "id": "6",
         "color": "#000000",
-        "latex": "g_{iro}=6.070345262996582",
+        "latex": "g_{iro}=2.0686292378583957",
         "hidden": true,
         "slider": {
           "hardMin": true,
