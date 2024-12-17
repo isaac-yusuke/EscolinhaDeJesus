@@ -1,0 +1,446 @@
+{
+  "version": 11,
+  "randomSeed": "fc255bb1c7438f592d6a966ad7c6d66b",
+  "graph": {
+    "viewport": {
+      "xmin": -172.30819288618338,
+      "ymin": -82.75592411848919,
+      "xmax": 115.76530065173907,
+      "ymax": 226.24868451520462
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "443",
+        "text": "Então, se chegou Nabucodonosor à porta do forno de fogo ardente; falou e disse: Sadraque, Mesaque e Abede-Nego, servos do Deus Altíssimo, saí e vinde! Então, Sadraque, Mesaque e Abede-Nego saíram do meio do fogo\n\nDaniel 3:26"
+      },
+      {
+        "type": "folder",
+        "id": "121074",
+        "title": "clock"
+      },
+      {
+        "type": "expression",
+        "id": "121075",
+        "folderId": "121074",
+        "color": "#2d70b3",
+        "latex": "c_{lock}=\\left\\{o_{n}=1:H_{istoria}\\to\\min\\left(10,H_{istoria}+0.2\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "121077",
+        "folderId": "121074",
+        "color": "#6042a6",
+        "latex": "o_{n}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121078",
+        "folderId": "121074",
+        "color": "#000000",
+        "latex": "r_{eset}=H_{istoria}\\to0,o_{n}\\to0"
+      },
+      {
+        "type": "expression",
+        "id": "121079",
+        "folderId": "121074",
+        "color": "#c74440",
+        "latex": "c_{lick}=\\left\\{o_{n}=0:o_{n}\\to1,r_{eset}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "121019",
+        "color": "#6042a6",
+        "latex": "H_{istoria}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 8000,
+          "loopMode": "PLAY_ONCE",
+          "min": "0"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "121021",
+        "title": "Rei e amigos caindo",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "121033",
+        "folderId": "121021",
+        "color": "#000000",
+        "latex": "K=45+0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "150"
+        }
+      },
+      {
+        "type": "text",
+        "id": "121035",
+        "folderId": "121021",
+        "text": "1) Nabucodonosor"
+      },
+      {
+        "type": "expression",
+        "id": "121031",
+        "folderId": "121021",
+        "color": "#388c46",
+        "latex": "C_{oroa}=\\left[\\left(-7.5,60\\right),\\left(+7.5,60\\right),\\left(+7.5,70\\right),\\left(+2.5,65\\right),\\left(0,70\\right),\\left(-2.5,65\\right),\\left(-7.5,70\\right)\\right]+\\left(11,0\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "442",
+        "folderId": "121021",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(C_{oroa}+P_{1}\\right)",
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "121028",
+        "folderId": "121021",
+        "color": "#000000",
+        "latex": "P_{essoa1}=KP_{essoa}\\left(t,b_{1},s_{1}\\right)+P_{1}"
+      },
+      {
+        "type": "expression",
+        "id": "121032",
+        "folderId": "121021",
+        "color": "#6042a6",
+        "latex": "P_{1}=\\left(-150,0\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "121029",
+        "folderId": "121021",
+        "color": "#c74440",
+        "latex": "b_{1}=-0.5+\\left\\{H_{istoria}<6.5:0,H_{istoria}-6.5\\right\\}\\cdot\\frac{1.5}{3.5}",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-1",
+          "max": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121030",
+        "folderId": "121021",
+        "color": "#2d70b3",
+        "latex": "s_{1}=0+\\left\\{H_{istoria}<7.5:0,10\\right\\}",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-1",
+          "max": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "121037",
+        "folderId": "121021",
+        "text": "2) Amigo 1 caindo"
+      },
+      {
+        "type": "expression",
+        "id": "121038",
+        "folderId": "121021",
+        "color": "#000000",
+        "latex": "P_{essoa2}=\\left(\\left(KP_{essoa}\\left(t,b_{2},s_{2}\\right)\\right).y,\\left(KP_{essoa}\\left(t,b_{2},s_{2}\\right)\\right).x\\right)+P_{2}"
+      },
+      {
+        "type": "expression",
+        "id": "121044",
+        "folderId": "121021",
+        "color": "#c74440",
+        "latex": "b_{2}=1+0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-1",
+          "max": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121045",
+        "folderId": "121021",
+        "color": "#2d70b3",
+        "latex": "s_{2}=10+0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "-1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121039",
+        "folderId": "121021",
+        "color": "#6042a6",
+        "latex": "P_{2}=\\left(-30,150-40H_{istoria}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "121048",
+        "folderId": "121021",
+        "text": "3) Amigo 2 caindo"
+      },
+      {
+        "type": "expression",
+        "id": "121049",
+        "folderId": "121021",
+        "color": "#000000",
+        "latex": "P_{essoa3}=\\left(\\left(KP_{essoa}\\left(t,b_{2},s_{2}\\right)\\right).y,\\left(KP_{essoa}\\left(t,b_{2},s_{2}\\right)\\right).x\\right)+P_{3}"
+      },
+      {
+        "type": "expression",
+        "id": "121052",
+        "folderId": "121021",
+        "color": "#6042a6",
+        "latex": "P_{3}=P_{2}+\\left(0,40\\right)",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "121053",
+        "folderId": "121021",
+        "text": "3) Amigo 2 caindo"
+      },
+      {
+        "type": "expression",
+        "id": "121054",
+        "folderId": "121021",
+        "color": "#000000",
+        "latex": "P_{essoa4}=\\left(\\left(KP_{essoa}\\left(t,b_{2},s_{2}\\right)\\right).y,\\left(KP_{essoa}\\left(t,b_{2},s_{2}\\right)\\right).x\\right)+P_{4}"
+      },
+      {
+        "type": "expression",
+        "id": "121057",
+        "folderId": "121021",
+        "color": "#6042a6",
+        "latex": "P_{4}=P_{3}+\\left(0,40\\right)",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "121014",
+        "title": "Cenário"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "121014",
+        "color": "#388c46",
+        "latex": "y\\le0",
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "417",
+        "folderId": "121014",
+        "color": "#c74440",
+        "latex": "\\left(\\frac{x}{2}\\right)^{2}+\\left(y-35\\right)^{2}\\le35^{2}",
+        "lines": false,
+        "colorLatex": "F_{ogo}",
+        "fillOpacity": ".7"
+      },
+      {
+        "type": "expression",
+        "id": "121060",
+        "folderId": "121014",
+        "color": "#000000",
+        "latex": "P_{essoa5}=\\left(KP_{essoa}\\left(t,b_{3},s_{3}\\right)\\right)+P_{5}"
+      },
+      {
+        "type": "expression",
+        "id": "121065",
+        "folderId": "121014",
+        "color": "#c74440",
+        "latex": "b_{3}=-0.5+0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-1",
+          "max": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121062",
+        "folderId": "121014",
+        "color": "#2d70b3",
+        "latex": "s_{3}=1+0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "-1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121063",
+        "folderId": "121014",
+        "color": "#6042a6",
+        "latex": "P_{5}=\\left(35,0\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "121064",
+        "folderId": "121014",
+        "color": "#000000",
+        "latex": "P_{essoa6}=\\left(KP_{essoa}\\left(t,b_{3},s_{3}\\right)\\right)+P_{6}"
+      },
+      {
+        "type": "expression",
+        "id": "121072",
+        "folderId": "121014",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(C_{oroa}+P_{6}\\right)",
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "121067",
+        "folderId": "121014",
+        "color": "#6042a6",
+        "latex": "P_{6}=\\left(05,0\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "121068",
+        "folderId": "121014",
+        "color": "#000000",
+        "latex": "P_{essoa7}=\\left(KP_{essoa}\\left(t,b_{3},s_{3}\\right)\\right)+P_{7}"
+      },
+      {
+        "type": "expression",
+        "id": "121069",
+        "folderId": "121014",
+        "color": "#6042a6",
+        "latex": "P_{7}=\\left(-25,0\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "121070",
+        "folderId": "121014",
+        "color": "#000000",
+        "latex": "P_{essoa8}=\\left(KP_{essoa}\\left(t,b_{3},s_{3}\\right)\\right)+P_{8}"
+      },
+      {
+        "type": "expression",
+        "id": "121071",
+        "folderId": "121014",
+        "color": "#6042a6",
+        "latex": "P_{8}=\\left(-55,0\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "413",
+        "folderId": "121014",
+        "color": "#fa7e19",
+        "latex": "x^{2}+y^{2}\\le100^{2}\\left\\{y>0\\right\\}\\left\\{\\left(\\frac{x}{2}\\right)^{2}+\\left(y-35\\right)^{2}\\ge35^{2}\\right\\}",
+        "colorLatex": "A_{rgila}",
+        "fillOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121022",
+        "folderId": "121014",
+        "color": "#fa7e19",
+        "latex": "x^{2}+y^{2}\\le100^{2}\\left\\{\\left|x\\right|>20\\left(H_{istoria}-6.5\\right)\\right\\}\\left\\{y>0\\right\\}\\left\\{\\left(\\frac{x}{2}\\right)^{2}+\\left(y-35\\right)^{2}\\le35^{2}\\right\\}",
+        "colorLatex": "A_{rgila}",
+        "fillOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "432",
+        "folderId": "121014",
+        "color": "#fa7e19",
+        "latex": "\\left|x\\right|\\le\\left[1,-1\\right]40\\left\\{y<120\\right\\}\\left\\{x^{2}+y^{2}>100^{2}\\right\\}",
+        "colorLatex": "A_{rgila}",
+        "fillOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "121016",
+        "title": "Funções",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "121017",
+        "folderId": "121016",
+        "color": "#2d70b3",
+        "latex": "P_{essoa}\\left(t,b,s\\right)=\\frac{\\left(\\left\\{t<\\frac{1}{10}:5t,t<\\frac{2}{10}:1-5\\left(t-\\frac{1}{10}\\right),t<\\frac{3}{10}:\\frac{1}{2},t<\\frac{4}{10}:\\frac{1}{2}+5\\left(t-\\frac{3}{10}\\right),t<\\frac{5}{10}:\\frac{1}{2}-5\\left(t-\\frac{4}{10}\\right),t<\\frac{6}{10}:\\frac{1}{2}+\\frac{\\cos\\left(2\\pi10t\\right)}{3},t<\\frac{7}{10}:0.625+\\frac{\\cos\\left(2\\pi10t\\right)}{12},t<\\frac{8}{10}:0.37+\\frac{\\cos\\left(2\\pi10t\\right)}{12},t<\\frac{9}{10}:\\left\\{\\left|s\\right|<10:\\frac{1}{3}+3\\left(t-\\frac{8}{10}\\right),\\frac{1}{2}+\\cos\\left(\\frac{4\\pi\\left(t-\\frac{8}{10}\\right)}{\\frac{2}{10}}\\right)\\frac{1.5}{10}\\right\\}\\right\\},\\left\\{t<\\frac{1}{10}:10t,t<\\frac{2}{10}:10\\left(t-\\frac{1}{10}\\right),t<\\frac{3}{10}:1+10\\left(t-\\frac{2}{10}\\right),t<\\frac{4}{10}:\\frac{3}{2}+5b\\left(t-\\frac{3}{10}\\right),t<\\frac{5}{10}:\\frac{3}{2}+5b\\left(t-\\frac{4}{10}\\right),t<\\frac{6}{10}:\\frac{5}{2}-\\frac{1}{6}+\\frac{\\sin\\left(2\\pi10t\\right)}{3},t<\\frac{7}{10}:\\frac{5}{2}+\\frac{\\sin\\left(2\\pi10t\\right)}{12},t<\\frac{8}{10}:\\frac{5}{2}+\\frac{\\sin\\left(2\\pi10t\\right)}{12},t<\\frac{9}{10}:\\left\\{\\left|s\\right|<10:2.2+20s\\left(\\left(\\left|\\frac{1}{20}-\\left(t-\\frac{8}{10}\\right)\\right|\\right)^{2}\\right),2.2+\\sin\\left(\\frac{4\\pi\\left(t-\\frac{8}{10}\\right)}{\\frac{2}{10}}\\right)\\frac{1.}{10}\\right\\}\\right\\}\\right)}{2.}"
+      },
+      {
+        "type": "folder",
+        "id": "121026",
+        "title": "Cores",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "121058",
+        "folderId": "121026",
+        "color": "#000000",
+        "latex": "F_{ogo}=\\operatorname{rgb}\\left(255,255,0\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121024",
+        "folderId": "121026",
+        "color": "#2d70b3",
+        "latex": "A_{rgila}=\\operatorname{rgb}\\left(200,100,00\\right)"
+      }
+    ],
+    "ticker": {
+      "handlerLatex": "c_{lock}",
+      "playing": true,
+      "open": true
+    }
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
