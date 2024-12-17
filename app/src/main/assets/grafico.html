@@ -24,7 +24,14 @@
 
 <script>
     const calculatorElement = document.getElementById('calculator');
-    const calculator = Desmos.GraphingCalculator(calculatorElement);
+    const calculator = Desmos.GraphingCalculator(calculatorElement, {
+            showExpressions: false,                // Oculta a lista de equações
+            settingsMenu: false,                   // Oculta o menu de configurações
+            zoomButtons: false,                    // Oculta os botões de zoom
+            showResetButtonOnGraphpaper: false,    // Oculta o botão de visão inicial (casa)
+            expressions: false,                    // Evita a interação com as expressões
+            border: false                          // Remove borda padrão
+        });
 
     // Obter o nome do arquivo JSON a partir da query string
     const params = new URLSearchParams(window.location.search);
