@@ -36,6 +36,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.sp
 
 
@@ -88,6 +89,7 @@ fun Tela1(onIniciarClick: () -> Unit) {
         Image(
             painter = rememberImagePainter(R.drawable.imagem1),
             contentDescription = "Fundo",
+            contentScale = ContentScale.FillBounds, // Estica a imagem para ocupar todo o espaço
             modifier = Modifier.fillMaxSize()
         )
         Button(
@@ -119,6 +121,7 @@ fun Tela2(listaDeBotoes: List<String>, onBotaoClick: (Int) -> Unit) {
         Image(
             painter = rememberImagePainter(R.drawable.imagem1),
             contentDescription = "Fundo",
+            contentScale = ContentScale.FillBounds, // Estica a imagem para ocupar todo o espaço
             modifier = Modifier.fillMaxSize()
         )
 
