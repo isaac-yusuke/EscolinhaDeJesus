@@ -112,5 +112,18 @@ val graficos = listOf(
             Toque no Naamã pra ver o que aconteceu com ele!
         """.trimIndent(),
         arquivoJson = "ACuraDeNaama.json"
+    ),
+    GraficoData(
+        titulo = "A Conversão de Saulo",
+        texto = """
+            A Conversão de Saulo
+            
+            Texto Bíblico: 
+            Atos 9
+            
+            Saulo estava indo para a cidade de Damasco para prender os cristãos, mas teve um encontro com Jesus e se converteu.
+            Toque no cavalo dele para ver o que aconteceu!
+        """.trimIndent(),
+        arquivoJson = "SauloSaulo.json"
     )
 )
