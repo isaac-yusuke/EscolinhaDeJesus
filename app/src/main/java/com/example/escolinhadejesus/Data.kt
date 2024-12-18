@@ -86,5 +86,18 @@ val graficos = listOf(
             Toque no paralítico para ver o que aconteceu quando Jesus falou com ele!
         """.trimIndent(),
         arquivoJson = "OParaliticoDoTanque.json"
+    ),
+    GraficoData(
+        titulo = "Pedro e Jesus Andam na Água",
+        texto = """
+            Pedro e Jesus Andam na Água
+            
+            Texto Bíblico: 
+            Mateus 14:30,31
+            
+            Quando os discípulos estavam atravessando o mar, Jesus foi até eles andando sobre a água. Pedro pediu pra andar na água também, e Jesus chamou ele pra fora, porém a tempestade assustou Pedro!
+            Mexa o medidor de fé e veja o que aconteceu quando a fé de Pedro diminuiu!
+        """.trimIndent(),
+        arquivoJson = "PedroEJesusAndamNaAgua.json"
     )
 )
