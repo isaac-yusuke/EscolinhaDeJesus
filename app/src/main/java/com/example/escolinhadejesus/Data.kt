@@ -125,5 +125,18 @@ val graficos = listOf(
             Toque no cavalo dele para ver o que aconteceu!
         """.trimIndent(),
         arquivoJson = "SauloSaulo.json"
+    ),
+    GraficoData(
+        titulo = "A Arca de Noé",
+        texto = """
+            A Arca de Noé
+            
+            Texto Bíblico: 
+            Gênesis 6-8
+            
+            Deus mandou Noé construir uma grande arca, porque Ele iria mandar um dilúvio. Noé obedeceu as ordens de Deus e os casais de cada espécie de animal entraram na arca.
+            Toque na arca para ver o que aconteceu! 
+        """.trimIndent(),
+        arquivoJson = "AArcaDeNoe.json"
     )
 )
