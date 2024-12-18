@@ -177,5 +177,18 @@ val graficos = listOf(
             Toque na estátua pra ver o sonho do rei.
         """.trimIndent(),
         arquivoJson = "OSonhoDeNabucodonosor.json"
+    ),
+    GraficoData(
+        titulo = "A Criação",
+        texto = """
+            A Criação
+            
+            Texto Bíblico: 
+            Gênesis 1
+            
+            No princípio Deus criou os céus e a Terra. Você se lembra do que Deus criou em cada dia da semana?
+            Arraste o ponto na tela para ver!
+        """.trimIndent(),
+        arquivoJson = "ACriacao.json"
     )
 )
