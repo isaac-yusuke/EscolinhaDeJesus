@@ -190,5 +190,18 @@ val graficos = listOf(
             Arraste o ponto na tela para ver!
         """.trimIndent(),
         arquivoJson = "ACriacao.json"
+    ),
+    GraficoData(
+        titulo = "A Queda de Jericó",
+        texto = """
+            A Queda de Jericó
+            
+            Texto Bíblico: 
+            Josué 6
+            
+            A cidade de Jericó tinha muros muito altos, mas Deus falou para Josué e o povo darem 7 voltas ao redor do muro e depois quebrar os vasos e gritar.
+            Toque no muro para ver como Josué conquistou Jericó!
+        """.trimIndent(),
+        arquivoJson = "AQuedaDeJerico.json"
     )
 )
