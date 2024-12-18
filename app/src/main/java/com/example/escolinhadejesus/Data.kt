@@ -138,5 +138,18 @@ val graficos = listOf(
             Toque na arca para ver o que aconteceu! 
         """.trimIndent(),
         arquivoJson = "AArcaDeNoe.json"
+    ),
+    GraficoData(
+        titulo = "Daniel na Cova dos Leões",
+        texto = """
+            Daniel na Cova dos Leões
+            
+            Texto Bíblico: 
+            Daniel 6
+            
+            Daniel orava todos os dias, e foi jogado na cova dos leões por causa disso. No dia seguinte, o rei Dario foi ver se Deus teria livrado Daniel dos leões.
+            Clique na cova para ver a história!
+        """.trimIndent(),
+        arquivoJson = "DanielNaCovaDosLeoes.json"
     )
 )

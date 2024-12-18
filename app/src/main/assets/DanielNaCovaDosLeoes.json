@@ -1,0 +1,349 @@
+{
+  "version": 11,
+  "randomSeed": "fc255bb1c7438f592d6a966ad7c6d66b",
+  "graph": {
+    "viewport": {
+      "xmin": -138.6354039951272,
+      "ymin": -74.20649818680712,
+      "xmax": 132.49258992291703,
+      "ymax": 202.74351051265646
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "443",
+        "text": "Quando ia se aproximando da cova, chamou Daniel com voz aflita: \"Daniel, servo do Deus vivo, será que o seu Deus, a quem você serve continuamente, pôde livrá-lo dos leões? \"\n\nDaniel 6:20"
+      },
+      {
+        "type": "folder",
+        "id": "121145",
+        "title": "clock"
+      },
+      {
+        "type": "expression",
+        "id": "121146",
+        "folderId": "121145",
+        "color": "#2d70b3",
+        "latex": "c_{lock}=\\left\\{e_{stado}=1:e_{stado1},e_{stado}\\to e_{stado}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "121147",
+        "folderId": "121145",
+        "color": "#388c46",
+        "latex": "e_{stado}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121148",
+        "folderId": "121145",
+        "color": "#6042a6",
+        "latex": "e_{stado1}=D_{aniel}\\to\\min\\left(D_{aniel}+4,250\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121149",
+        "folderId": "121145",
+        "color": "#000000",
+        "latex": "c_{lick}=\\left\\{e_{stado}=0:e_{stado}\\to1,r_{eset}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "121150",
+        "folderId": "121145",
+        "color": "#c74440",
+        "latex": "r_{eset}=e_{stado}\\to0,D_{aniel}\\to0"
+      },
+      {
+        "type": "expression",
+        "id": "439",
+        "color": "#2d70b3",
+        "latex": "D_{aniel}=0",
+        "slider": {
+          "hardMin": true,
+          "loopMode": "PLAY_ONCE",
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#388c46",
+        "latex": "y\\le0",
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "408",
+        "color": "#2d70b3",
+        "latex": "y\\ge0\\left\\{x^{2}+\\left(y-35\\right)^{2}>35^{2}\\right\\}\\left\\{\\left(x-22.5\\right)^{2}+\\left(y-Q_{ueda}\\right)^{2}>7.5^{2}\\right\\}",
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "409",
+        "color": "#000000",
+        "latex": "y\\ge0",
+        "lines": true,
+        "fillOpacity": "N_{oite}"
+      },
+      {
+        "type": "expression",
+        "id": "410",
+        "color": "#388c46",
+        "latex": "N_{oite}=\\max\\left(0,\\min\\left(\\max\\left(0,\\frac{\\left(D_{aniel}-60\\right)}{50}\\right),-\\frac{\\left(D_{aniel}-120\\right)}{50}\\right)\\right)",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "playDirection": -1,
+          "min": "0",
+          "max": ".5",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "415",
+        "color": "#c74440",
+        "latex": "x_{pedra}=\\min\\left(\\max\\left(0,D_{aniel}-190\\right),50\\right)",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "50"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "435",
+        "color": "#c74440",
+        "latex": "Q_{ueda}=170-D_{aniel}",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "playDirection": -1,
+          "min": "110",
+          "max": "170"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "434",
+        "color": "#000000",
+        "latex": "y=Q_{ueda}\\left\\{x>-10\\right\\}\\left\\{x<15\\right\\}\\left\\{y>\\sqrt{100^{2}-x^{2}}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "436",
+        "color": "#000000",
+        "latex": "\\left|y-\\left(Q_{ueda}\\right)\\right|3=-\\left(x+10\\right)\\left\\{x>-30\\right\\}\\left\\{y>\\sqrt{100^{2}-x^{2}}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "437",
+        "color": "#000000",
+        "latex": "\\left|y-\\left(Q_{ueda}\\right)\\right|2=-\\left(x-10\\right)\\left\\{x>-5\\right\\}\\left\\{y>\\sqrt{100^{2}-x^{2}}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "438",
+        "color": "#000000",
+        "latex": "\\left(x-\\left(22.5+\\left[0,2.5,2.5,-3\\right]\\right)\\right)^{2}+\\left(y-\\left(Q_{ueda}+\\left[0,3,-3,0\\right]\\right)\\right)^{2}=\\left[7.5,1.5,1.5,2\\right]^{2}\\left\\{y>\\sqrt{100^{2}-x^{2}}\\right\\}",
+        "fillOpacity": ".3"
+      },
+      {
+        "type": "expression",
+        "id": "417",
+        "color": "#000000",
+        "latex": "x^{2}+\\left(y-35\\right)^{2}\\le35^{2}",
+        "fillOpacity": ".3"
+      },
+      {
+        "type": "expression",
+        "id": "413",
+        "color": "#fa7e19",
+        "latex": "x^{2}+y^{2}\\le100^{2}\\left\\{y>0\\right\\}\\left\\{x^{2}+\\left(y-35\\right)^{2}>35^{2}\\right\\}",
+        "fillOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "432",
+        "color": "#fa7e19",
+        "latex": "\\left|x\\right|\\le\\left[1,-1\\right]40\\left\\{y<120\\right\\}\\left\\{x^{2}+y^{2}>100^{2}\\right\\}",
+        "fillOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "433",
+        "color": "#000000",
+        "latex": "\\left|x\\right|\\le\\left[1,-1\\right]40\\left\\{y<120\\right\\}\\left\\{x^{2}+y^{2}>100^{2}\\right\\}",
+        "fillOpacity": ".1"
+      },
+      {
+        "type": "expression",
+        "id": "412",
+        "color": "#000000",
+        "latex": "x^{2}+y^{2}\\le100^{2}\\left\\{y>0\\right\\}",
+        "fillOpacity": ".1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "419",
+        "color": "#000000",
+        "latex": "x=\\left[0,D_{ario}\\right]\\left\\{y>20\\right\\}\\left\\{y<45\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "420",
+        "color": "#000000",
+        "latex": "y=-3\\left|x-\\left[0,D_{ario}\\right]\\right|+20\\left\\{y>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "421",
+        "color": "#000000",
+        "latex": "y-40=\\frac{\\left|x-\\left[0,D_{ario}\\right]\\right|}{\\left[2,-2\\right]}\\left\\{\\left|x-\\left[0,D_{ario}\\right]\\right|<15\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "441",
+        "color": "#000000",
+        "latex": "\\left(x-\\left(D_{ario}-\\left[0,3,-3\\right]\\right)\\right)^{2}+\\left(y-\\left(52.5+\\left[0,2.5,2.5\\right]\\right)\\right)^{2}=\\left[7.5,1.5,1.5\\right]^{2}"
+      },
+      {
+        "type": "expression",
+        "id": "424",
+        "color": "#000000",
+        "latex": "y-49=\\left[1,\\min\\left(1,\\max\\left(-1,\\frac{\\left(D_{aniel}-221\\right)}{40}\\right)\\right)\\right]\\left(\\frac{x-\\left[0,D_{ario}\\right]}{3}\\right)^{2}\\left\\{\\left|x-\\left[0,D_{ario}\\right]\\right|<3\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "442",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(D_{ario}-7.5,60\\right),\\left(D_{ario}+7.5,60\\right),\\left(D_{ario}+7.5,70\\right),\\left(D_{ario}+2.5,65\\right),\\left(D_{ario},70\\right),\\left(D_{ario}-2.5,65\\right),\\left(D_{ario}-7.5,70\\right)\\right)",
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "440",
+        "color": "#c74440",
+        "latex": "D_{ario}=\\min\\left(-105,-170+\\max\\left(0,D_{aniel}-125\\right)\\right)",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "playDirection": -1,
+          "min": "-170",
+          "max": "-100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "423",
+        "color": "#000000",
+        "latex": "\\left(x-\\left[0,3,-3\\right]\\right)^{2}+\\left(y-\\left(52.5+\\left[0,2.5,2.5\\right]\\right)\\right)^{2}=\\left[7.5,1.5,1.5\\right]^{2}"
+      },
+      {
+        "type": "expression",
+        "id": "425",
+        "color": "#fa7e19",
+        "latex": "\\left(x+20\\right)^{2}+\\left(y-30\\right)^{2}<7.5^{2}"
+      },
+      {
+        "type": "expression",
+        "id": "426",
+        "color": "#000000",
+        "latex": "\\left(x+20+\\left[0,3,-3\\right]\\right)^{2}+\\left(y-\\left(30+\\left[0,3,3\\right]\\right)\\right)^{2}=\\left[7.5,1,1\\right]^{2}"
+      },
+      {
+        "type": "expression",
+        "id": "428",
+        "color": "#000000",
+        "latex": "\\left(x+20\\right)^{2}+\\left(y-30\\right)^{2}\\le1^{2}",
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "429",
+        "color": "#000000",
+        "latex": "y=27\\left\\{\\left|x+20\\right|<2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "430",
+        "color": "#fa7e19",
+        "latex": "y-25\\le-\\frac{\\left(x+20\\right)}{2.5}^{2}\\left\\{\\left(x+20\\right)^{2}+\\left(y-30\\right)^{2}>11^{2}\\right\\}\\left\\{x^{2}+\\left(y-35\\right)^{2}\\le35^{2}\\right\\}",
+        "fillOpacity": ".9"
+      },
+      {
+        "type": "expression",
+        "id": "431",
+        "color": "#000000",
+        "latex": "y-25\\le-\\frac{\\left(x+20\\right)}{2.5}^{2}\\left\\{\\left(x+20\\right)^{2}+\\left(y-30\\right)^{2}>11^{2}\\right\\}\\left\\{x^{2}+\\left(y-35\\right)^{2}\\le35^{2}\\right\\}",
+        "fillOpacity": ".2",
+        "lineOpacity": "0.2"
+      },
+      {
+        "type": "expression",
+        "id": "427",
+        "color": "#fa7e19",
+        "latex": "\\left(x+20\\right)^{2}+\\left(y-30\\right)^{2}<11^{2}\\left\\{\\left(x+20\\right)^{2}+\\left(y-30\\right)^{2}>7.5^{2}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "414",
+        "color": "#fa7e19",
+        "latex": "\\left(x-x_{pedra}\\right)^{2}+\\left(y-35\\right)^{2}\\le35^{2}\\left\\{y>0\\right\\}",
+        "fillOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "422",
+        "color": "#000000",
+        "latex": "\\left(x-x_{pedra}\\right)^{2}+\\left(y-35\\right)^{2}\\le35^{2}\\left\\{y>0\\right\\}",
+        "fillOpacity": ".1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      }
+    ],
+    "ticker": {
+      "handlerLatex": "c_{lock}",
+      "playing": true,
+      "open": true
+    }
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
