@@ -1,0 +1,391 @@
+{
+  "version": 11,
+  "randomSeed": "4c70f82df1e6e80052c214475cea872a",
+  "graph": {
+    "viewport": {
+      "xmin": -10.520834965160587,
+      "ymin": -9.229527704273654,
+      "xmax": 21.2259054298297,
+      "ymax": 22.517212690716637
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false,
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "121109",
+        "title": "clock"
+      },
+      {
+        "type": "expression",
+        "id": "121112",
+        "folderId": "121109",
+        "color": "#388c46",
+        "latex": "e_{stado}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121113",
+        "folderId": "121109",
+        "color": "#6042a6",
+        "latex": "e_{stado1}=M_{ergulhos}\\to\\min\\left(M_{ergulhos}+0.05,7\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121110",
+        "folderId": "121109",
+        "color": "#c74440",
+        "latex": "c_{lock}=\\left\\{e_{stado}=1:e_{stado1},M_{ergulhos}\\to M_{ergulhos}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "121114",
+        "folderId": "121109",
+        "color": "#000000",
+        "latex": "r_{eset}=e_{stado}\\to0,M_{ergulhos}\\to0"
+      },
+      {
+        "type": "expression",
+        "id": "121111",
+        "folderId": "121109",
+        "color": "#2d70b3",
+        "latex": "c_{lick}=\\left\\{e_{stado}=0:e_{stado}\\to1,\\left\\{M_{ergulhos}=7:r_{eset}\\right\\}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "121118",
+        "folderId": "121109",
+        "color": "#6042a6",
+        "latex": "i_{f}\\left(n\\right)=\\left\\{\\left|n-M_{ergulhos}\\right|<0.5:1,0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "121116",
+        "folderId": "121109",
+        "color": "#2d70b3",
+        "latex": "P_{Numero}=\\left(10,9\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "121117",
+        "folderId": "121109",
+        "color": "#388c46",
+        "latex": "T_{amNumero}=4"
+      },
+      {
+        "type": "expression",
+        "id": "121115",
+        "folderId": "121109",
+        "color": "#000000",
+        "latex": "Z_{ero}=P_{Numero}+T_{amNumero}\\left(\\left(\\frac{\\cos2\\pi t}{4},\\frac{\\sin2\\pi t}{2}\\right)+\\left(0.25,0.5\\right)\\right)",
+        "lineOpacity": "i_{f}\\left(0\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121120",
+        "folderId": "121109",
+        "color": "#000000",
+        "latex": "U_{m}=P_{Numero}+T_{amNumero}\\left(0.25,t\\right)",
+        "lineOpacity": "i_{f}\\left(1\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121121",
+        "folderId": "121109",
+        "color": "#000000",
+        "latex": "D_{ois}=P_{Numero}+T_{amNumero}\\left(\\left\\{t<\\frac{1}{5}:\\frac{5}{2}t,t<\\frac{2}{5}:\\frac{1}{2},t<\\frac{3}{5}:\\frac{5}{2}\\left(t-\\frac{2}{5}\\right),t<\\frac{4}{5}:0,\\frac{5}{2}\\left(t-\\frac{4}{5}\\right)\\right\\},\\left\\{t<\\frac{1}{5}:1,t<\\frac{2}{5}:\\frac{5}{2}t,t<\\frac{3}{5}:\\frac{1}{2},t<\\frac{4}{5}:\\frac{5}{2}\\left(t-\\frac{3}{5}\\right),0\\right\\}\\right)",
+        "lineOpacity": "i_{f}\\left(2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121122",
+        "folderId": "121109",
+        "color": "#000000",
+        "latex": "T_{res}=P_{Numero}+T_{amNumero}\\left(\\left\\{t<\\frac{1}{5}:\\frac{5}{2}t,t<\\frac{2}{5}:\\frac{1}{2},t<\\frac{3}{5}:\\frac{5}{2}\\left(t-\\frac{2}{5}\\right),t<\\frac{4}{5}:0.5,\\frac{5}{2}\\left(t-\\frac{4}{5}\\right)\\right\\},\\left\\{t<\\frac{1}{5}:1,t<\\frac{2}{5}:\\frac{5}{2}t,t<\\frac{3}{5}:\\frac{1}{2},t<\\frac{4}{5}:\\frac{5}{2}\\left(t-\\frac{3}{5}\\right),0\\right\\}\\right)",
+        "lineOpacity": "i_{f}\\left(3\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121123",
+        "folderId": "121109",
+        "color": "#000000",
+        "latex": "Q_{uatro}=P_{Numero}+T_{amNumero}\\left(\\left\\{t<\\frac{1}{5}:0,t<\\frac{2}{5}:\\frac{1}{2},t<\\frac{3}{5}:\\frac{5}{2}\\left(t-\\frac{2}{5}\\right),t<\\frac{4}{5}:0.5,0\\cdot\\frac{5}{2}\\left(t-\\frac{4}{5}\\right)\\right\\},\\left\\{t<\\frac{1}{5}:\\frac{1}{2}+\\frac{5}{2}t,t<\\frac{2}{5}:\\frac{5}{2}t,t<\\frac{3}{5}:\\frac{1}{2},t<\\frac{4}{5}:\\frac{5}{2}\\left(t-\\frac{3}{5}\\right),0\\right\\}\\right)",
+        "lineOpacity": "i_{f}\\left(4\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121124",
+        "folderId": "121109",
+        "color": "#000000",
+        "latex": "C_{inco}=P_{Numero}+T_{amNumero}\\left(\\left\\{t<\\frac{1}{5}:\\frac{5}{2}t,t<\\frac{2}{5}:0,t<\\frac{3}{5}:\\frac{5}{2}\\left(t-\\frac{2}{5}\\right),t<\\frac{4}{5}:\\frac{1}{2},\\frac{5}{2}\\left(t-\\frac{4}{5}\\right)\\right\\},\\left\\{t<\\frac{1}{5}:1,t<\\frac{2}{5}:\\frac{5}{2}t,t<\\frac{3}{5}:\\frac{1}{2},t<\\frac{4}{5}:\\frac{5}{2}\\left(t-\\frac{3}{5}\\right),0\\right\\}\\right)",
+        "lineOpacity": "i_{f}\\left(5\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121125",
+        "folderId": "121109",
+        "color": "#000000",
+        "latex": "S_{eis}=P_{Numero}+T_{amNumero}\\left(\\left\\{t<\\frac{1}{5}:\\frac{5}{2}t,t<\\frac{2}{5}:0,t<\\frac{3}{5}:\\frac{5}{2}\\left(t-\\frac{2}{5}\\right),t<\\frac{4}{5}:\\frac{1}{2},\\frac{5}{2}\\left(t-\\frac{4}{5}\\right)\\right\\},\\left\\{t<\\frac{1}{5}:1,t<\\frac{2}{5}:5\\left(t-\\frac{1}{5}\\right),t<\\frac{3}{5}:\\frac{1}{2},t<\\frac{4}{5}:\\frac{5}{2}\\left(t-\\frac{3}{5}\\right),0\\right\\}\\right)",
+        "lineOpacity": "i_{f}\\left(6\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121126",
+        "folderId": "121109",
+        "color": "#000000",
+        "latex": "S_{ete}=P_{Numero}+T_{amNumero}\\left(\\left\\{t<\\frac{1}{5}:\\frac{5}{2}t,t<\\frac{2}{5}:\\frac{1}{2},t<\\frac{3}{5}:0\\cdot\\frac{5}{2}\\left(t-\\frac{2}{5}\\right),t<\\frac{4}{5}:0.5,0\\cdot\\frac{5}{2}\\left(t-\\frac{4}{5}\\right)\\right\\},\\left\\{t<\\frac{1}{5}:1,t<\\frac{2}{5}:\\frac{5}{2}t,t<\\frac{3}{5}:\\frac{1}{2},t<\\frac{4}{5}:\\frac{5}{2}\\left(t-\\frac{3}{5}\\right),0\\right\\}\\right)",
+        "lineOpacity": "i_{f}\\left(7\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "82",
+        "color": "#c74440",
+        "latex": "M_{ergulhos}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 20000,
+          "loopMode": "PLAY_ONCE",
+          "min": "0",
+          "max": "7"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#2d70b3",
+        "latex": "y\\le5\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "88",
+        "color": "#2d70b3",
+        "latex": "y\\le5\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "22",
+        "color": "#000000",
+        "latex": "v+0=2u+1\\left\\{v>0\\right\\}\\left\\{v<3\\right\\}\\left\\{y>0\\right\\}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "23",
+        "color": "#000000",
+        "latex": "v+0=-\\left(2u-5\\right)\\left\\{v>0\\right\\}\\left\\{v<3\\right\\}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "color": "#000000",
+        "latex": "0+u=\\left\\{v>3\\right\\}\\left\\{v<8\\right\\}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "color": "#000000",
+        "latex": "\\left(u-1\\right)^{2}+\\left(v-9.25\\right)^{2}=1.25^{2}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "85",
+        "color": "#000000",
+        "latex": "\\left(\\frac{u-\\left[0,2.2,1.5,1.5,.5,.5\\right]}{\\left[.2,.4,.4,.2,.2,.1\\right]}\\right)^{2}+\\left(\\frac{\\left(v-\\left[9.25,9.25,10.4,8,8.5,10\\right]\\right)}{\\left[.4,.2,.3,.4,.1,.2\\right]}\\right)^{2}\\le1^{2}\\left\\{\\left(u-1\\right)^{2}+\\left(v-9.25\\right)^{2}\\le1.25^{2}\\right\\}\\left\\{y>5\\right\\}\\left\\{M_{ergulhos}<6.5\\right\\}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "86",
+        "color": "#000000",
+        "latex": "\\left(\\frac{\\left(u-\\left[1.4,.6,1\\right]\\right)}{\\left[.2,.2,.5\\right]}\\right)^{2}+\\left(\\frac{v-\\left[9.6,9.6,8.6\\right]}{\\left[.2,.2,.35\\right]}\\right)^{2}=1^{2}\\left\\{v>\\left[0,0,8.75\\right]\\right\\}\\left\\{M_{ergulhos}<6.5\\right\\}\\left\\{y>5\\right\\}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "87",
+        "color": "#000000",
+        "latex": "\\left(\\frac{\\left(u-\\left[1.4,.6,1\\right]\\right)}{\\left[.2,.2,.5\\right]}\\right)^{2}+\\left(\\frac{v-\\left[9.6,9.6,8.9\\right]}{\\left[.2,.2,.35\\right]}\\right)^{2}=1^{2}\\left\\{v<\\left[10,10,8.75\\right]\\right\\}\\left\\{M_{ergulhos}>6.5\\right\\}\\left\\{y>5\\right\\}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "color": "#000000",
+        "latex": "v+0=2u-1+4.9\\left\\{u<1\\right\\}\\left\\{u>0\\right\\}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "37",
+        "color": "#000000",
+        "latex": "v+0=-u+.3+6.5\\left\\{u>1\\right\\}\\left\\{u<2.5\\right\\}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "color": "#2d70b3",
+        "latex": "t_{1}=\\frac{3}{2}\\sin^{2}\\pi A_{mem}",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "2\\pi"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "65",
+        "color": "#000000",
+        "latex": "\\left(x_{mao},y_{mao}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "63",
+        "color": "#c74440",
+        "latex": "x_{mao}=6+6.812\\cos\\left(t_{1}+\\frac{73}{180}\\pi\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "64",
+        "color": "#c74440",
+        "latex": "y_{mao}=6.812\\sin\\left(t_{1}+\\frac{73}{180}\\pi\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "color": "#c74440",
+        "latex": "u=\\cos\\left(t_{1}\\right)\\left(x-5\\right)+\\sin\\left(t_{1}\\right)y"
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "color": "#c74440",
+        "latex": "v=\\cos\\left(t_{1}+\\frac{\\pi}{2}\\right)\\left(x-6\\right)+\\sin\\left(t_{1}+\\frac{\\pi}{2}\\right)y"
+      },
+      {
+        "type": "expression",
+        "id": "60",
+        "color": "#388c46",
+        "latex": "v_{2}=-\\sin(t_{1})(x-6)+\\cos(t_{1})y"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "color": "#c74440",
+        "latex": "m=10",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "color": "#2d70b3",
+        "latex": "a=1",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "26",
+        "color": "#c74440",
+        "latex": "0+u=0",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "color": "#c74440",
+        "latex": "0+v=0",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "78",
+        "color": "#2d70b3",
+        "latex": "A_{mem}=\\sin^{2}\\left(\\frac{M_{ergulhos}\\pi}{2}\\right)",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 8000,
+          "loopMode": "PLAY_ONCE",
+          "min": "0",
+          "max": "1",
+          "step": "0.001"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "83",
+        "color": "#2d70b3",
+        "latex": "\\sin^{2}\\left(\\frac{x}{2}\\cdot\\pi\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "84",
+        "color": "#388c46",
+        "latex": "y\\le0",
+        "fillOpacity": "1"
+      }
+    ],
+    "ticker": {
+      "handlerLatex": "c_{lock}",
+      "playing": true,
+      "open": true
+    }
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

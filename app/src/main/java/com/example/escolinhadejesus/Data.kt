@@ -49,7 +49,7 @@ val graficos = listOf(
         arquivoJson = "SonhoDeJaco.json"
     ),
     GraficoData(
-        titulo = "Sadraque, Mesaque e Abede-Nego",
+        titulo = "Os 3 Amigos na Fornalha",
         texto = """
             Os 3 Amigos na Fornalha
             
@@ -99,5 +99,18 @@ val graficos = listOf(
             Mexa o medidor de fé e veja o que aconteceu quando a fé de Pedro diminuiu!
         """.trimIndent(),
         arquivoJson = "PedroEJesusAndamNaAgua.json"
+    ),
+    GraficoData(
+        titulo = "A Cura de Naamã",
+        texto = """
+            A Cura de Naamã
+            
+            Texto Bíblico: 
+            2 Reis 5
+            
+            Naamã era um general do exército do rei da Síria, mas ele estava com lepra. O profeta Eliseu disse para ele mergulhar 7 vezes no rio Jordão. Naamã não gostou da ideia, mas acabou aceitando.
+            Toque no Naamã pra ver o que aconteceu com ele!
+        """.trimIndent(),
+        arquivoJson = "ACuraDeNaama.json"
     )
 )
