@@ -151,5 +151,18 @@ val graficos = listOf(
             Clique na cova para ver a história!
         """.trimIndent(),
         arquivoJson = "DanielNaCovaDosLeoes.json"
+    ),
+    GraficoData(
+        titulo = "Jesus Ressuscitou!",
+        texto = """
+            Jesus Ressuscitou!
+            
+            Texto Bíblico: 
+            João 20
+            
+            Maria Madalena estava muito triste, porque Jesus tinha morrido. No domingo de manhã ela foi até o túmulo, mas lá descobriu que Jesus estava vivo!
+            Toque na Maria Madalena e siga ela para ver o que aconteceu!
+        """.trimIndent(),
+        arquivoJson = "JesusRessuscitou.json"
     )
 )
