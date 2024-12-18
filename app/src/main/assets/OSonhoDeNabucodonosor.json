@@ -1,0 +1,342 @@
+{
+  "version": 11,
+  "randomSeed": "d89e69bddb39da7af65b2d27a9053402",
+  "graph": {
+    "viewport": {
+      "xmin": -26.323038999735488,
+      "ymin": -9.89065133123513,
+      "xmax": 18.018605762660215,
+      "ymax": 30.50034157068117
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false,
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "121158",
+        "title": "clock"
+      },
+      {
+        "type": "expression",
+        "id": "121159",
+        "folderId": "121158",
+        "color": "#c74440",
+        "latex": "c_{lock}=\\left\\{e_{stado}=0:e_{stado}\\to e_{stado}\\ ,e_{stado1}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "121160",
+        "folderId": "121158",
+        "color": "#2d70b3",
+        "latex": "e_{stado}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "121161",
+        "folderId": "121158",
+        "color": "#388c46",
+        "latex": "e_{stado1}=S_{onho}\\to\\min\\left(S_{onho}+1,50\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "121162",
+        "folderId": "121158",
+        "color": "#6042a6",
+        "latex": "c_{lick}=\\left\\{e_{stado}=0:e_{stado}\\to1,\\left\\{S_{onho}=50:r_{eset}\\right\\}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "121163",
+        "folderId": "121158",
+        "color": "#000000",
+        "latex": "r_{eset}=S_{onho}\\to0,e_{stado}\\to0"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "color": "#000000",
+        "latex": "S_{onho}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "50"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#000000",
+        "latex": "y_{sonho}\\ge0\\left\\{y_{sonho}\\le1\\right\\}\\left\\{\\left|x\\right|>x_{pe}\\right\\}\\left\\{\\left|x\\right|<x_{pe}+2\\right\\}",
+        "fillOpacity": ".7",
+        "lineOpacity": "0.5",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "55",
+        "color": "#fa7e19",
+        "latex": "\\left(\\left|x\\right|-\\left(x_{pe}+\\left[0.5,1,1.5,1.7\\right]\\right)\\right)^{2}+\\left(y_{sonho}-\\left[0.6,0.5,0.75,0.1\\right]\\right)^{2}\\le\\left(\\frac{1}{50}\\right)",
+        "fillOpacity": "0.9",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "color": "#2d70b3",
+        "latex": "x_{pe}=0.5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "color": "#2d70b3",
+        "latex": "y_{sonho}=y+e_{statua}\\left\\{y>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "13",
+        "color": "#c74440",
+        "latex": "e_{statua}=\\max\\left(0,S_{onho}-30\\right)",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#000000",
+        "latex": "\\left|x\\right|\\ge x_{pe}\\left\\{\\left|x\\right|\\le1.5\\right\\}\\left\\{y_{sonho}\\ge1\\right\\}\\left\\{y_{sonho}\\le5\\right\\}",
+        "fillOpacity": "0.7",
+        "lineOpacity": "0.7",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#fa7e19",
+        "latex": "y_{sonho}\\ge5\\left\\{y_{sonho}\\le9\\right\\}\\left\\{y_{sonho}\\le-5\\left|x\\right|+15\\right\\}\\left\\{\\left|x\\right|\\le2\\right\\}",
+        "fillOpacity": "0.7",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#000000",
+        "latex": "y_{sonho}\\ge5\\left\\{y_{sonho}\\le9\\right\\}\\left\\{y_{sonho}\\le-5\\left|x\\right|+15\\right\\}\\left\\{\\left|x\\right|\\le2\\right\\}",
+        "fillOpacity": "0.1",
+        "lineOpacity": "0.4",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#000000",
+        "latex": "y_{sonho}\\le-5\\left|x\\right|+15",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "color": "#000000",
+        "latex": "\\left|x\\right|\\le1.2\\left\\{y_{sonho}\\ge9\\right\\}\\left\\{y_{sonho}<13\\right\\}",
+        "fillOpacity": "0.3",
+        "lineOpacity": "0.3",
+        "lineWidth": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "color": "#000000",
+        "latex": "y_{sonho}+0=-\\left|x\\right|+13.2\\left\\{\\left|x\\right|<2.5\\right\\}\\left\\{\\left|x\\right|>1.2\\right\\}",
+        "hidden": true,
+        "lineOpacity": "0.3"
+      },
+      {
+        "type": "expression",
+        "id": "14",
+        "color": "#000000",
+        "latex": "y_{sonho}-\\left[0,1\\right]\\le-\\left|x\\right|+13.2\\left\\{\\left|x\\right|<3.5\\right\\}\\left\\{\\left|x\\right|>1.2\\right\\}\\left\\{y_{sonho}+0\\ge-\\left|x\\right|+13.2\\right\\}\\left\\{y_{sonho}\\ge10.7\\right\\}",
+        "lineOpacity": "0.3",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "color": "#000000",
+        "latex": "y_{sonho}+0=\\left|x\\right|+8.2\\left\\{\\left|x\\right|>1.2\\right\\}\\left\\{\\left|x\\right|<2.5\\right\\}",
+        "hidden": true,
+        "lineOpacity": "0.3"
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "color": "#000000",
+        "latex": "y_{sonho}+\\left[0,1\\right]\\ge\\left|x\\right|+8.2\\left\\{\\left|x\\right|>1.2\\right\\}\\left\\{\\left|x\\right|<3.5\\right\\}\\left\\{y_{sonho}+0\\le\\left|x\\right|+8.2\\right\\}\\left\\{y_{sonho}\\le10.71\\right\\}",
+        "lineOpacity": "0.3",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "color": "#fa7e19",
+        "latex": "\\left(x^{2}\\right)+\\left(y-\\left(-e_{statua}+14.5\\right)\\right)^{2}\\le1.5^{2}\\left\\{y>0\\right\\}",
+        "fillOpacity": "0.75",
+        "lineOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "color": "#000000",
+        "latex": "\\left(x-\\left[0.75,-0.75\\right]\\right)^{2}+\\left(y-\\left(-e_{statua}+15\\right)\\right)^{2}=.25^{2}\\left\\{y>0\\right\\}",
+        "fillOpacity": "0.5",
+        "lineOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "color": "#000000",
+        "latex": "y=13.75-e_{statua}\\left\\{\\left|x\\right|\\le0.75\\right\\}\\left\\{y>0\\right\\}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "color": "#388c46",
+        "latex": "y\\le0",
+        "hidden": true,
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "23",
+        "color": "#388c46",
+        "latex": "y_{montanha}=20-\\left(\\frac{\\left(x+40\\right)}{5}\\right)^{2}",
+        "hidden": true,
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "24",
+        "color": "#388c46",
+        "latex": "y_{chao}=\\max\\left(y_{montanha},0\\right)",
+        "hidden": true,
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "color": "#388c46",
+        "latex": "y\\le y_{chao}",
+        "fillOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "26",
+        "color": "#000000",
+        "latex": "\\left(x-x_{pedra}\\right)^{2}+\\left(y-y_{pedra}\\right)^{2}\\le p_{edra}^{2}",
+        "fillOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "30",
+        "color": "#6042a6",
+        "latex": "y_{pedra}=\\max\\left(p_{edra},20-S_{onho}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "27",
+        "color": "#c74440",
+        "latex": "x_{pedra}=\\min\\left(0,-30+S_{onho}\\right)",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-30",
+          "max": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "28",
+        "color": "#2d70b3",
+        "latex": "p_{edra}=3+\\max\\left(0,S_{onho}-40\\right)",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      }
+    ],
+    "ticker": {
+      "handlerLatex": "c_{lock}",
+      "playing": true,
+      "open": true
+    }
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

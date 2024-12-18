@@ -164,5 +164,18 @@ val graficos = listOf(
             Toque na Maria Madalena e siga ela para ver o que aconteceu!
         """.trimIndent(),
         arquivoJson = "JesusRessuscitou.json"
+    ),
+    GraficoData(
+        titulo = "O Sonho de Nabucodonosor",
+        texto = """
+            O Sonho de Nabucodonosor
+            
+            Texto Bíblico: 
+            Daniel 2
+            
+            O rei Nabucodonosor teve um sonho impressionante! Viu uma grande estátua feita com vários metais, que foi destruída por uma pedra. Essa pedra representa o reino de Deus, que vai durar pra sempre!
+            Toque na estátua pra ver o sonho do rei.
+        """.trimIndent(),
+        arquivoJson = "OSonhoDeNabucodonosor.json"
     )
 )
