@@ -4,9 +4,9 @@
   "graph": {
     "viewport": {
       "xmin": -4.438358020076886,
-      "ymin": -4.023223616747707,
+      "ymin": -3.4398513494096754,
       "xmax": 4.2599754264466485,
-      "ymax": 5.528489129114142
+      "ymax": 4.945116861776112
     },
     "showGrid": false,
     "showXAxis": false,
@@ -56,7 +56,7 @@
         "id": "122342",
         "folderId": "122324",
         "color": "#2d70b3",
-        "latex": "p_{asso}=t_{0}\\to\\min\\left(t_{0}+0.03,11\\right)"
+        "latex": "p_{asso}=t_{0}\\to\\min\\left(t_{0}+0.05,11\\right)"
       },
       {
         "type": "expression",
