@@ -166,6 +166,19 @@ val graficos = listOf(
         arquivoJson = "JesusAcalmaATempestade.json"
     ),
     GraficoData(
+        titulo = "A Pesca Maravilhosa",
+        texto = """
+            A Pesca Maravilhosa
+            
+            Texto Bíblico: 
+            Lucas 5
+            
+            Pedro e seus companheiros tinham pescado a noite toda, mas não pegaram nenhum peixe! Quando voltaram para a praia, Jesus disse pra eles jogarem a rede de novo.
+            Toque no barco de pesca para ver a história!
+        """.trimIndent(),
+        arquivoJson = "APescaMaravilhosa.json"
+    ),
+    GraficoData(
         titulo = "O Paralítico do Tanque",
         texto = """
             O Paralítico do Tanque
