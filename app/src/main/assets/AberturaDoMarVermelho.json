@@ -1,0 +1,422 @@
+{
+  "version": 11,
+  "randomSeed": "c104ae50959f1c5a596c8cc329476528",
+  "graph": {
+    "viewport": {
+      "xmin": -10.52059224074635,
+      "ymin": -8.455165105737763,
+      "xmax": 10.729407759253668,
+      "ymax": 8.923356861788516
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false,
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "434",
+        "text": "Moisés estendeu a mão sobre o mar, e Deus, o Senhor, com um vento leste muito forte, fez com que o mar recuasse. O vento soprou a noite inteira e fez o mar virar terra seca. As águas foram divididas, e os israelitas passaram pelo mar em terra seca, com muralhas de água nos dois lados. Êxodo 14:21, 22"
+      },
+      {
+        "type": "folder",
+        "id": "440",
+        "title": "App Escolinha de Jesus"
+      },
+      {
+        "type": "expression",
+        "id": "442",
+        "folderId": "440",
+        "color": "#000000",
+        "latex": "o_{n}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "441",
+        "folderId": "440",
+        "color": "#6042a6",
+        "latex": "c_{lock}=\\left\\{o_{n}=1:E_{xodo}\\to\\min\\left(E_{xodo}+p_{asso},15\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "443",
+        "folderId": "440",
+        "color": "#c74440",
+        "latex": "p_{asso}=0.1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "444",
+        "folderId": "440",
+        "color": "#2d70b3",
+        "latex": "r_{eset}=E_{xodo}\\to0,o_{n}\\to0"
+      },
+      {
+        "type": "expression",
+        "id": "445",
+        "folderId": "440",
+        "color": "#388c46",
+        "latex": "c_{lick}=\\left\\{o_{n}=0:o_{n}\\to1,\\left\\{E_{xodo}=15:r_{eset},o_{n}\\to o_{n}\\right\\}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "346",
+        "color": "#c74440",
+        "latex": "E_{xodo}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 20000,
+          "loopMode": "PLAY_ONCE",
+          "min": "0",
+          "max": "15"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "357",
+        "color": "#c74440",
+        "latex": "E_{gipcios}=\\max\\left(-E_{xodo}+11,-2\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "333",
+        "color": "#fa7e19",
+        "latex": "y\\le0\\left\\{\\left|x\\right|-t<0\\right\\}",
+        "hidden": true,
+        "fillOpacity": "0.6"
+      },
+      {
+        "type": "expression",
+        "id": "436",
+        "color": "#fa7e19",
+        "latex": "y\\le0",
+        "fillOpacity": "0.6",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "329",
+        "color": "#388c46",
+        "latex": "y\\ge0",
+        "fillOpacity": "0.3",
+        "clickableInfo": {
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "354",
+        "color": "#c74440",
+        "latex": "y=\\frac{\\left(\\cos\\left(6x\\right)\\right)}{2}+E_{gipcios}+\\frac{1}{4}\\left\\{y<E_{gipcios}+\\frac{1}{4}\\right\\}\\left\\{\\left|x\\right|<2\\right\\}",
+        "lineOpacity": ".9",
+        "lineWidth": "5"
+      },
+      {
+        "type": "expression",
+        "id": "358",
+        "color": "#c74440",
+        "latex": "y=\\frac{\\left(\\left|\\sin\\left(20x\\right)\\right|^{\\frac{1}{3}}\\right)}{3}+\\frac{1}{2}+E_{gipcios}+\\frac{1}{2}\\cdot\\left[0,1,2\\right]\\left\\{\\left|x\\right|<\\frac{9\\pi}{20}\\right\\}",
+        "lineOpacity": ".9"
+      },
+      {
+        "type": "expression",
+        "id": "359",
+        "color": "#c74440",
+        "latex": "\\left(\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},1.83333+E_{gipcios}\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10"
+      },
+      {
+        "type": "expression",
+        "id": "361",
+        "color": "#c74440",
+        "latex": "\\left(\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},1.33333+E_{gipcios}\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10"
+      },
+      {
+        "type": "expression",
+        "id": "366",
+        "color": "#c74440",
+        "latex": "\\left(\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},0.83333+E_{gipcios}\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10"
+      },
+      {
+        "type": "expression",
+        "id": "360",
+        "color": "#c74440",
+        "latex": "\\left(-\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},1.83333+E_{gipcios}\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10"
+      },
+      {
+        "type": "expression",
+        "id": "362",
+        "color": "#c74440",
+        "latex": "\\left(-\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},1.33333+E_{gipcios}\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10"
+      },
+      {
+        "type": "expression",
+        "id": "365",
+        "color": "#c74440",
+        "latex": "\\left(-\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},0.83333+E_{gipcios}\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10"
+      },
+      {
+        "type": "expression",
+        "id": "355",
+        "color": "#c74440",
+        "latex": "y=\\frac{\\left(\\left|\\cos\\left(18x\\right)\\right|^{\\frac{1}{3}}\\right)}{3}+E_{gipcios}\\left\\{\\left|x-\\left[\\frac{\\pi}{6},\\frac{\\pi}{2},-\\frac{\\pi}{6},-\\frac{\\pi}{2}\\right]\\right|<.09\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "356",
+        "color": "#c74440",
+        "latex": "\\left(\\left[1,3,-1,-3\\right]\\frac{\\pi}{6},E_{gipcios}+\\frac{1}{3}\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#2d70b3",
+        "latex": "y\\le0\\left\\{\\left|x\\right|-t>0\\right\\}\\left\\{y>-3\\right\\}",
+        "fillOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "435",
+        "color": "#2d70b3",
+        "latex": "y\\le0\\left\\{\\left|x\\right|-t_{2}>0\\right\\}",
+        "fillOpacity": "1",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "437",
+        "color": "#c74440",
+        "latex": "t_{2}=\\min\\left(\\max\\left(E_{xodo}-5.5,0\\right),2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "331",
+        "color": "#2d70b3",
+        "latex": "t=\\max\\left(\\min\\left(\\min\\left(\\max\\left(E_{xodo}-5.5,0\\right),2\\right),-E_{xodo}+15\\right),0\\right)",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 1142.857142857143,
+          "min": "0",
+          "max": "2"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "344",
+        "color": "#000000",
+        "latex": "y=\\frac{\\left(\\left|\\cos\\left(20x\\right)\\right|^{\\frac{1}{3}}\\right)}{3}-g\\left(a_{traso},2.5\\right)+5.25\\left\\{\\left|x\\right|<\\frac{\\pi}{40}\\right\\}",
+        "lineOpacity": ".9",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "345",
+        "color": "#000000",
+        "latex": "\\left(0,5.33333333+.25-g\\left(a_{traso},2.5\\right)\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointSize": "10",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "334",
+        "color": "#000000",
+        "latex": "y=\\frac{\\left(\\left|\\sin\\left(20x\\right)\\right|^{\\frac{1}{3}}\\right)}{3}+6-g\\left(a_{traso},2.5\\right)+\\frac{1}{2}\\cdot\\left[0,1,2\\right]\\left\\{\\left|x\\right|<\\frac{9\\pi}{20}\\right\\}",
+        "lineOpacity": ".9",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "336",
+        "color": "#000000",
+        "latex": "\\left(\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},7.333-g\\left(a_{traso},2.5\\right)\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "338",
+        "color": "#000000",
+        "latex": "\\left(\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},6.833-g\\left(a_{traso},2.5\\right)\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "342",
+        "color": "#000000",
+        "latex": "\\left(\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},6.333-g\\left(a_{traso},2.5\\right)\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "337",
+        "color": "#000000",
+        "latex": "\\left(-\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},6.333-g\\left(a_{traso},2.5\\right)\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "339",
+        "color": "#000000",
+        "latex": "\\left(-\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},6.833-g\\left(a_{traso},2.5\\right)\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "343",
+        "color": "#000000",
+        "latex": "\\left(-\\left[1,3,5,7,9,11,13,15,17\\right]\\frac{\\pi}{40},7.333-g\\left(a_{traso},2.5\\right)\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "pointOpacity": ".9",
+        "pointSize": "10",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "c_{lick}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "347",
+        "color": "#2d70b3",
+        "latex": "f\\left(a,b,x\\right)=\\max\\left(\\min\\left(x,a\\right),x-b\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "351",
+        "color": "#000000",
+        "latex": "g\\left(a,b\\right)=f\\left(a,b,E_{xodo}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "350",
+        "color": "#6042a6",
+        "latex": "y=f\\left(1,2,x\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "352",
+        "color": "#c74440",
+        "latex": "\\max\\left(\\min\\left(\\min\\left(\\max\\left(x-5.5,0\\right),2\\right),-x+15\\right),0\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "353",
+        "color": "#2d70b3",
+        "latex": "a_{traso}=5",
+        "hidden": true
+      }
+    ],
+    "ticker": {
+      "handlerLatex": "c_{lock}",
+      "playing": true,
+      "open": true
+    }
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

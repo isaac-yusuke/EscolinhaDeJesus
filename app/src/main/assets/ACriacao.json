@@ -3,10 +3,10 @@
   "randomSeed": "698961acbeeef003b205872858e12ca9",
   "graph": {
     "viewport": {
-      "xmin": -6.258083669286013,
-      "ymin": -4.010508336387027,
-      "xmax": 5.983442552766252,
-      "ymax": 7.555623335483044
+      "xmin": -6.686983858087845,
+      "ymin": -4.87651235445537,
+      "xmax": 6.319637752842687,
+      "ymax": 8.130109256475162
     },
     "showGrid": false,
     "showXAxis": false,
@@ -169,12 +169,13 @@
         "type": "expression",
         "id": "4",
         "color": "#6042a6",
-        "latex": "w=2",
+        "latex": "w=1.417",
         "hidden": true,
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 2000,
+          "playDirection": -1,
           "isPlaying": true,
           "min": "1",
           "max": "2"
@@ -184,7 +185,7 @@
         "type": "expression",
         "id": "6",
         "color": "#c74440",
-        "latex": "c=2.2",
+        "latex": "c=3.246",
         "hidden": true,
         "slider": {
           "hardMin": true,
@@ -340,16 +341,17 @@
         "id": "121166",
         "folderId": "121165",
         "color": "#000000",
-        "latex": "\\left(D_{ia}-3.5,0\\right)",
+        "latex": "\\left(D_{ia}-3.5,-01\\right)",
         "showLabel": true,
-        "label": "Dia da semana"
+        "label": "Dia da semana",
+        "labelOrientation": "below_left"
       },
       {
         "type": "expression",
         "id": "121170",
         "folderId": "121165",
         "color": "#000000",
-        "latex": "\\left(\\left[0,7\\right]-3.5,0\\right)",
+        "latex": "\\left(\\left[0,7\\right]-3.5,-01\\right)",
         "points": false,
         "lines": true,
         "lineWidth": "5"
@@ -423,7 +425,7 @@
         "id": "121182",
         "folderId": "121165",
         "color": "#000000",
-        "latex": "\\left(D_{ia}-3.5,0\\right)+\\left(-1.5,-1.5\\right)+N_{um}",
+        "latex": "\\left(D_{ia}-3.5,-01\\right)+\\left(-1.5,.5\\right)+N_{um}",
         "lineWidth": "4"
       },
       {

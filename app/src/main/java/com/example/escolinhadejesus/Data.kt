@@ -62,6 +62,32 @@ val graficos = listOf(
         arquivoJson = "SonhoDeJaco.json"
     ),
     GraficoData(
+        titulo = "A Abertura do Mar Vermelho",
+        texto = """
+            A Abertura do Mar Vermelho
+            
+            Texto Bíblico: 
+            Êxodo 14
+            
+            Quando Moisés tirou os israelitas do Egito, o exército do faraó foi atrás deles, mas Deus abriu o Mar Vermelho pro povo passar!
+            Toque no mar para ver a história!
+        """.trimIndent(),
+        arquivoJson = "AberturaDoMarVermelho.json"
+    ),
+    GraficoData(
+        titulo = "Moisés e a Batalha Contra os Amalequitas",
+        texto = """
+            Moisés e a Batalha Contra os Amalequitas
+            
+            Texto Bíblico: 
+            Êxodo 17
+            
+            Quando o povo de Israel enfrentou os amalequitas, Moisés levantou os braços pra pedir a ajuda de Deus, mas os braços dele ficaram cansados!
+            Toque no Moisés pra ajudar ele a levantar os braços!
+        """.trimIndent(),
+        arquivoJson = "BatalhaContraOsAmalequitas.json"
+    ),
+    GraficoData(
         titulo = "A Queda de Jericó",
         texto = """
             A Queda de Jericó
