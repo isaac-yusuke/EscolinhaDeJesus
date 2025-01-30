@@ -149,11 +149,11 @@ fun Tela1(onIniciarClick: () -> Unit, onInstrucoesClick: () -> Unit) {
             painter = rememberImagePainter(R.drawable.imagem2),
             contentDescription = "Ícone Link",
             modifier = Modifier
-                .size(60.dp) // Tamanho da imagem pequena
+                .size(110.dp) // Tamanho da imagem pequena
                 .align(Alignment.BottomEnd) // Alinha no canto inferior direito
                 .padding(16.dp) // Espaçamento da borda
                 .clickable {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://seu-link-aqui.com"))
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://chat.whatsapp.com/Bh1QV3vj6PM7LNIh7Zt9Ig"))
                     context.startActivity(intent)
                 }
         )
@@ -270,6 +270,7 @@ fun Tela3() {
                             - Leia a história em sua Bíblia para ver mais detalhes
                             - Lá também há uma explicação de como interagir com a história. A maioria das histórias tem interação
                             - LEIA O TEXTO NA DIREITA PARA VER COMO INTERAGIR COM A HISTÓRIA
+                            - Clique no ícone do Whatsapp no canto direito da tela inicial para entrar no nosso grupo e receber todas as atualizações!
                             """.trimIndent(),
                         color = Color.White,
                         fontSize = 25.sp,
