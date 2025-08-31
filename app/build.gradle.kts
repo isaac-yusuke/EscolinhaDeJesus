@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.escolinhadejesus"
+    namespace = "br.isaacyyanagui.escolinhadejesus"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.escolinhadejesus"
+        applicationId = "br.isaacyyanagui.escolinhadejesus"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
