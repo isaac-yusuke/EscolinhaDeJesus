@@ -193,8 +193,8 @@ fun Tela1(onIniciarClick: () -> Unit, onInstrucoesClick: () -> Unit, onReverVide
                 Text(text = "Instruções", fontSize = 30.sp)
             }
         }
-
-        // Imagem pequena no canto inferior direito
+/*
+        // Imagem pequena no canto inferior direito - TIRA ESSE PRA POR NA PLAYSTORE
         Image(
             painter = rememberImagePainter(R.drawable.imagem2),
             contentDescription = "Ícone Link",
@@ -207,7 +207,7 @@ fun Tela1(onIniciarClick: () -> Unit, onInstrucoesClick: () -> Unit, onReverVide
                     context.startActivity(intent)
                 }
         )
-
+*/
         // Nova imagem no canto superior esquerdo (imagem3) - Reproduzir vídeo de introdução
         Image(
             painter = rememberImagePainter(R.drawable.imagem3),
