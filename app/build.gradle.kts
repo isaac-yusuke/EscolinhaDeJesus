@@ -12,8 +12,8 @@ android {
         applicationId = "br.isaacyyanagui.escolinhadejesus"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2     //Tem que mudar sempre que fizer nova versao
+        versionName = "1.2" //Tem que mudar sempre que fizer nova versao
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
