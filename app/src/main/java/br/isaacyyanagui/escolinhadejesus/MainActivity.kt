@@ -43,6 +43,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.sp
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
@@ -133,6 +134,9 @@ fun TelaVideo(navController: NavController) {
             }
         },
         modifier = Modifier.fillMaxSize()
+                            .padding(
+                                end = WindowInsets.navigationBars.asPaddingValues().calculateEndPadding(LayoutDirection.Ltr)
+                            )
     )
 
     DisposableEffect(Unit) {
@@ -149,6 +153,9 @@ fun Tela1(onIniciarClick: () -> Unit, onInstrucoesClick: () -> Unit, onReverVide
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .padding(
+                end = WindowInsets.navigationBars.asPaddingValues().calculateEndPadding(LayoutDirection.Ltr)
+            )
             .background(color = Color(0xFF2E7D32)) // Fundo verde escuro
     ) {
         // Imagem de fundo
@@ -219,7 +226,8 @@ fun Tela1(onIniciarClick: () -> Unit, onInstrucoesClick: () -> Unit, onReverVide
                 .clickable { onReverVideoClick() } // Chama a função de exibir o vídeo
         )
 
-        // Texto "versão 1.x" no canto inferior esquerdo
+        // Texto "versão 1.x" no canto inferior esquerdo - tirei na versao da playstore
+        /*
         Text(
             text = "Versão 1.5",
             color = Color.White,
@@ -228,6 +236,7 @@ fun Tela1(onIniciarClick: () -> Unit, onInstrucoesClick: () -> Unit, onReverVide
                 .align(Alignment.BottomStart) // Alinha no canto inferior esquerdo
                 .padding(16.dp) // Espaçamento da borda
         )
+        */
     }
 }
 
@@ -237,6 +246,9 @@ fun Tela2(listaDeBotoes: List<String>, onBotaoClick: (Int) -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .padding(
+                end = WindowInsets.navigationBars.asPaddingValues().calculateEndPadding(LayoutDirection.Ltr)
+            )
             .background(color = Color(0xFF2E7D32)) // Cor verde escuro de fundo
     ) {
         // Imagem de fundo
@@ -288,6 +300,9 @@ fun Tela3() {
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .padding(
+                end = WindowInsets.navigationBars.asPaddingValues().calculateEndPadding(LayoutDirection.Ltr)
+            )
             .background(color = Color(0xFF2E7D32)), // Fundo verde escuro
         contentAlignment = Alignment.Center
     ) {
@@ -363,7 +378,11 @@ fun TelaGraficoI(estadoJson: String, imagem2: Int, textoRolavel: String) {
         }
     }
 
-    Row(modifier = Modifier.fillMaxSize()) {
+    Row(modifier = Modifier
+            .fillMaxSize()
+            .padding(
+                end = WindowInsets.navigationBars.asPaddingValues().calculateEndPadding(LayoutDirection.Ltr)
+            )) {
         // WebView para exibir o gráfico
         if (isServerReady) { // Carrega a WebView apenas quando o servidor estiver pronto
             AndroidView(factory = { context ->
