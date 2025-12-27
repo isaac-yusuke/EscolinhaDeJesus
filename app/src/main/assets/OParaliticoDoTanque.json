@@ -4,13 +4,20 @@
   "graph": {
     "viewport": {
       "xmin": -12.346170741105501,
-      "ymin": -8.589595638475943,
+      "ymin": -8.19174741981713,
       "xmax": 13.142415684675766,
-      "ymax": 15.068509648326453
+      "ymax": 15.67066142966764
     },
     "showGrid": false,
     "showXAxis": false,
-    "showYAxis": false
+    "showYAxis": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-12.346170741105501",
+      "xmax": "13.142415684675766",
+      "ymin": "-8.19174741981713",
+      "ymax": "14.67066142966764"
+    }
   },
   "expressions": {
     "list": [
@@ -85,7 +92,7 @@
         "id": "121097",
         "folderId": "121089",
         "color": "#6042a6",
-        "latex": "c_{lick}=\\left\\{e_{stado}=0:e_{stado}\\to1,r_{eset}\\right\\}"
+        "latex": "c_{lick}=\\left\\{e_{stado}=0:e_{stado}\\to1,\\left\\{L_{evanta}>1.5:r_{eset}\\right\\}\\right\\}"
       },
       {
         "type": "expression",
@@ -105,7 +112,7 @@
         "type": "expression",
         "id": "51",
         "color": "#c74440",
-        "latex": "t_{2}=0.53"
+        "latex": "t_{2}=3.23"
       },
       {
         "type": "expression",

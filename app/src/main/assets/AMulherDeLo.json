@@ -3,17 +3,24 @@
   "randomSeed": "e777a443592258ac375f8aff0d948726",
   "graph": {
     "viewport": {
-      "xmin": -4.429510458536001,
-      "ymin": -2.7788888936207847,
-      "xmax": 9.438759601448908,
-      "ymax": 10.429813135337003
+      "xmin": -5.50714,
+      "ymin": -1.50618,
+      "xmax": 7.54535,
+      "ymax": 5.13469
     },
     "showGrid": false,
     "showYAxis": false,
     "xAxisNumbers": false,
     "yAxisNumbers": false,
     "polarNumbers": false,
-    "squareAxes": false
+    "userLockedViewport": true,
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-5.50714",
+      "xmax": "7.54535",
+      "ymin": "-1.50618",
+      "ymax": "5.13469"
+    }
   },
   "expressions": {
     "list": [
@@ -94,7 +101,7 @@
         "id": "121010",
         "folderId": "120980",
         "color": "#2d70b3",
-        "latex": "t_{BolaDeFogo}=0.03",
+        "latex": "t_{BolaDeFogo}=0.84",
         "slider": {
           "hardMin": true,
           "hardMax": true,

@@ -4,13 +4,20 @@
   "graph": {
     "viewport": {
       "xmin": -11.419516607898595,
-      "ymin": -6.712016976830226,
+      "ymin": -6.43298199287448,
       "xmax": 13.408045720257652,
-      "ymax": 18.11554535132602
+      "ymax": 18.836510367370273
     },
     "showGrid": false,
     "showXAxis": false,
-    "showYAxis": false
+    "showYAxis": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-11.419516607898595",
+      "xmax": "13.408045720257652",
+      "ymin": "-5.43298199287448",
+      "ymax": "16.836510367370273"
+    }
   },
   "expressions": {
     "list": [
@@ -292,7 +299,7 @@
         "type": "expression",
         "id": "267",
         "color": "#6042a6",
-        "latex": "t=6.091973019996152",
+        "latex": "t=5.448787712816566",
         "slider": {
           "hardMin": true,
           "hardMax": true,

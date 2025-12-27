@@ -3,14 +3,21 @@
   "randomSeed": "f3c2ee97bde34202381aec4b122b1ffd",
   "graph": {
     "viewport": {
-      "xmin": -14.139204738551639,
-      "ymin": -6.110647973850243,
-      "xmax": 13.888785545968558,
-      "ymax": 14.60043438310373
+      "xmin": -14.896583149370235,
+      "ymin": -6.170109756260022,
+      "xmax": 13.482701824295832,
+      "ymax": 14.276624490869963
     },
     "showGrid": false,
     "showXAxis": false,
-    "showYAxis": false
+    "showYAxis": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-13.896583149370235",
+      "xmax": "12.482701824295832",
+      "ymin": "-7.170109756260022",
+      "ymax": "16.276624490869963"
+    }
   },
   "expressions": {
     "list": [

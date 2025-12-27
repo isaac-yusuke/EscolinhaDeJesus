@@ -4,9 +4,9 @@
   "graph": {
     "viewport": {
       "xmin": -6.420309168392535,
-      "ymin": -3.5332759610575373,
+      "ymin": -3.3500033052800786,
       "xmax": 3.9009178194401795,
-      "ymax": 6.09106447818206
+      "ymax": 5.907791822404602
     },
     "showGrid": false,
     "showXAxis": false,
@@ -15,7 +15,14 @@
     "yAxisMinorSubdivisions": 1,
     "xAxisNumbers": false,
     "yAxisNumbers": false,
-    "polarNumbers": false
+    "polarNumbers": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-6.420309168392535",
+      "xmax": "3.9009178194401795",
+      "ymin": "-3.3500033052800786",
+      "ymax": "5.907791822404602"
+    }
   },
   "expressions": {
     "list": [
@@ -286,13 +293,12 @@
         "type": "expression",
         "id": "7",
         "color": "#2d70b3",
-        "latex": "d=0.23",
+        "latex": "d=-0.354",
         "hidden": true,
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 800,
-          "playDirection": -1,
           "isPlaying": true,
           "min": "-.5",
           "max": ".5"
@@ -302,13 +308,12 @@
         "type": "expression",
         "id": "4",
         "color": "#6042a6",
-        "latex": "w=1",
+        "latex": "w=1.408",
         "hidden": true,
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 2000,
-          "playDirection": -1,
           "isPlaying": true,
           "min": "1",
           "max": "2"
@@ -318,7 +323,7 @@
         "type": "expression",
         "id": "6",
         "color": "#c74440",
-        "latex": "c=6.18",
+        "latex": "c=1.57",
         "hidden": true,
         "slider": {
           "hardMin": true,
@@ -487,13 +492,12 @@
         "type": "expression",
         "id": "144",
         "color": "#2d70b3",
-        "latex": "t=0.7",
+        "latex": "t=4.5",
         "hidden": true,
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 2000,
-          "playDirection": -1,
           "isPlaying": true,
           "min": "0",
           "max": "12"
@@ -503,12 +507,11 @@
         "type": "expression",
         "id": "128",
         "color": "#000000",
-        "latex": "a=-3.531",
+        "latex": "a=-3.106",
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 2666.6666666666665,
-          "playDirection": -1,
           "isPlaying": true,
           "min": "-4",
           "max": "-3"

@@ -4,9 +4,9 @@
   "graph": {
     "viewport": {
       "xmin": -6.686983858087845,
-      "ymin": -4.87651235445537,
+      "ymin": -4.571122188791931,
       "xmax": 6.319637752842687,
-      "ymax": 8.130109256475162
+      "ymax": 8.824719090811723
     },
     "showGrid": false,
     "showXAxis": false,
@@ -15,7 +15,14 @@
     "yAxisMinorSubdivisions": 1,
     "xAxisNumbers": false,
     "yAxisNumbers": false,
-    "polarNumbers": false
+    "polarNumbers": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-6.686983858087845",
+      "xmax": "6.319637752842687",
+      "ymin": "-5.571122188791931",
+      "ymax": "8.824719090811723"
+    }
   },
   "expressions": {
     "list": [
@@ -169,13 +176,12 @@
         "type": "expression",
         "id": "4",
         "color": "#6042a6",
-        "latex": "w=1.417",
+        "latex": "w=1.792",
         "hidden": true,
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 2000,
-          "playDirection": -1,
           "isPlaying": true,
           "min": "1",
           "max": "2"
@@ -185,7 +191,7 @@
         "type": "expression",
         "id": "6",
         "color": "#c74440",
-        "latex": "c=3.246",
+        "latex": "c=1.283",
         "hidden": true,
         "slider": {
           "hardMin": true,

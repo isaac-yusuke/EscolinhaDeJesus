@@ -4,16 +4,23 @@
   "graph": {
     "viewport": {
       "xmin": -11.273748557242161,
-      "ymin": -4.687736916965765,
+      "ymin": -4.843171073786749,
       "xmax": 9.425151360553123,
-      "ymax": 15.567615145448187
+      "ymax": 15.723049302269171
     },
     "showGrid": false,
     "showXAxis": false,
     "showYAxis": false,
     "xAxisNumbers": false,
     "yAxisNumbers": false,
-    "polarNumbers": false
+    "polarNumbers": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-11.273748557242161",
+      "xmax": "9.425151360553123",
+      "ymin": "-3.843171073786749",
+      "ymax": "14.723049302269171"
+    }
   },
   "expressions": {
     "list": [
@@ -74,7 +81,7 @@
         "id": "121135",
         "folderId": "121128",
         "color": "#388c46",
-        "latex": "c_{lick}=\\left\\{e_{stado}=0:e_{stado}\\to1,r_{eset}\\right\\}"
+        "latex": "c_{lick}=\\left\\{e_{stado}=0:e_{stado}\\to1,\\left\\{S_{auloSaulo}=1:r_{eset}\\right\\}\\right\\}"
       },
       {
         "type": "expression",
@@ -101,7 +108,7 @@
         "type": "expression",
         "id": "434",
         "color": "#388c46",
-        "latex": "t=1.9462455958863978",
+        "latex": "t=9.047133752808888",
         "hidden": true,
         "slider": {
           "hardMin": true,

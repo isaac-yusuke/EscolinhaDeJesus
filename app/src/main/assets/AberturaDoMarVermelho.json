@@ -4,16 +4,23 @@
   "graph": {
     "viewport": {
       "xmin": -10.52059224074635,
-      "ymin": -8.455165105737763,
+      "ymin": -8.296173473439067,
       "xmax": 10.729407759253668,
-      "ymax": 8.923356861788516
+      "ymax": 8.76436522948982
     },
     "showGrid": false,
     "showXAxis": false,
     "showYAxis": false,
     "xAxisNumbers": false,
     "yAxisNumbers": false,
-    "polarNumbers": false
+    "polarNumbers": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-10.52059224074635",
+      "xmax": "10.729407759253668",
+      "ymin": "-9.296173473439067",
+      "ymax": "9.76436522948982"
+    }
   },
   "expressions": {
     "list": [

@@ -4,13 +4,20 @@
   "graph": {
     "viewport": {
       "xmin": -172.30819288618338,
-      "ymin": -82.75592411848919,
+      "ymin": -82.44976033970113,
       "xmax": 115.76530065173907,
-      "ymax": 226.24868451520462
+      "ymax": 226.94252073641655
     },
     "showGrid": false,
     "showXAxis": false,
-    "showYAxis": false
+    "showYAxis": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-172.30819288618338",
+      "xmax": "115.76530065173907",
+      "ymin": "-57.44976033970113",
+      "ymax": "200.94252073641655"
+    }
   },
   "expressions": {
     "list": [
@@ -57,7 +64,7 @@
         "id": "121079",
         "folderId": "121074",
         "color": "#c74440",
-        "latex": "c_{lick}=\\left\\{o_{n}=0:o_{n}\\to1,r_{eset}\\right\\}"
+        "latex": "c_{lick}=\\left\\{o_{n}=0:o_{n}\\to1,\\left\\{H_{istoria}=10:r_{eset}\\right\\}\\right\\}"
       },
       {
         "type": "expression",

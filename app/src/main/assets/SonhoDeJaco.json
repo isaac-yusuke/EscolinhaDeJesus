@@ -3,17 +3,24 @@
   "randomSeed": "97dd541c0d3dfb2fb8fadba41e5b53d3",
   "graph": {
     "viewport": {
-      "xmin": -7.065198709289126,
-      "ymin": -2.6129778299966127,
-      "xmax": 12.733175313970301,
-      "ymax": 13.57838583515705
+      "xmin": -5.588196305761233,
+      "ymin": -0.7213607452146196,
+      "xmax": 10.917836667833438,
+      "ymax": 12.82306344125182
     },
     "showGrid": false,
     "showXAxis": false,
     "showYAxis": false,
     "xAxisNumbers": false,
     "yAxisNumbers": false,
-    "polarNumbers": false
+    "polarNumbers": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-5.588196305761233",
+      "xmax": "10.917836667833438",
+      "ymin": "-0.7213607452146196",
+      "ymax": "12.82306344125182"
+    }
   },
   "expressions": {
     "list": [
@@ -148,12 +155,11 @@
         "type": "expression",
         "id": "307",
         "color": "#6042a6",
-        "latex": "t=9.88",
+        "latex": "t=-9.12",
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 20000,
-          "playDirection": -1,
           "isPlaying": true,
           "max": "23"
         }

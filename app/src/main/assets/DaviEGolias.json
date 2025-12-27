@@ -4,15 +4,22 @@
   "graph": {
     "viewport": {
       "xmin": -77.71348497185087,
-      "ymin": -76.63445558371066,
+      "ymin": -76.1882685142728,
       "xmax": 186.38304260566375,
-      "ymax": 168.5622391717753
+      "ymax": 168.11605210233745
     },
     "showGrid": false,
     "showYAxis": false,
     "xAxisNumbers": false,
     "yAxisNumbers": false,
-    "polarNumbers": false
+    "polarNumbers": false,
+    "userLockedViewport": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-77.71348497185087",
+      "xmax": "186.38304260566375",
+      "ymin": "-100.1882685142728",
+      "ymax": "192.11605210233745"
+    }
   },
   "expressions": {
     "list": [
@@ -45,7 +52,7 @@
         "id": "69",
         "folderId": "58",
         "color": "#2d70b3",
-        "latex": "c_{lick}=\\left\\{e_{stado}=0:s_{tart},r_{eset}\\right\\}"
+        "latex": "c_{lick}=\\left\\{e_{stado}=0:s_{tart},\\left\\{D_{aviEGolias}=138:r_{eset},e_{stado}\\to e_{stado}\\right\\}\\right\\}"
       },
       {
         "type": "expression",
@@ -91,7 +98,7 @@
           "hardMin": true,
           "loopMode": "PLAY_ONCE",
           "min": "-37.5",
-          "max": "137.5"
+          "max": "138"
         }
       },
       {
@@ -447,7 +454,7 @@
         "type": "expression",
         "id": "6",
         "color": "#000000",
-        "latex": "g_{iro}=2.0686292378583957",
+        "latex": "g_{iro}=2.863662028564184",
         "hidden": true,
         "slider": {
           "hardMin": true,

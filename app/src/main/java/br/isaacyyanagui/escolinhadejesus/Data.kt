@@ -44,7 +44,7 @@ val graficos = listOf(
             Gênesis 19
             
             Deus destruiu as cidades de Sodoma e Gomorra porque as pessoas de lá eram más. Ló e sua família deveriam fugir sem olhar para trás, mas a mulher de Ló olhou!
-            Toque na família de Ló e acompanhe eles para ver o que aconteceu.
+            Toque na família de Ló para ver o que aconteceu.
         """.trimIndent(),
         arquivoJson = "AMulherDeLo.json"
     ),
@@ -226,7 +226,7 @@ val graficos = listOf(
             João 20
             
             Maria Madalena estava muito triste, porque Jesus tinha morrido. No domingo de manhã ela foi até o túmulo, mas lá descobriu que Jesus estava vivo!
-            Toque na Maria Madalena e siga ela para ver o que aconteceu!
+            Toque na Maria Madalena para ver o que aconteceu!
         """.trimIndent(),
         arquivoJson = "JesusRessuscitou.json"
     ),
