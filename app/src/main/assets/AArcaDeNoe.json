@@ -4,9 +4,9 @@
   "graph": {
     "viewport": {
       "xmin": -6.420309168392535,
-      "ymin": -3.3500033052800786,
+      "ymin": -2.8801528006795394,
       "xmax": 3.9009178194401795,
-      "ymax": 5.907791822404602
+      "ymax": 5.4379413178040625
     },
     "showGrid": false,
     "showXAxis": false,
@@ -20,8 +20,8 @@
     "__v12ViewportLatexStash": {
       "xmin": "-6.420309168392535",
       "xmax": "3.9009178194401795",
-      "ymin": "-3.3500033052800786",
-      "ymax": "5.907791822404602"
+      "ymin": "-2.8801528006795394",
+      "ymax": "5.4379413178040625"
     }
   },
   "expressions": {
@@ -84,6 +84,139 @@
         "folderId": "121138",
         "color": "#6042a6",
         "latex": "D_{iluvio}\\to0"
+      },
+      {
+        "type": "folder",
+        "id": "121145",
+        "title": "Arco íris (faz as 7 cores)"
+      },
+      {
+        "type": "expression",
+        "id": "121148",
+        "folderId": "121145",
+        "color": "#6042a6",
+        "latex": "V_{ermelho}=\\operatorname{rgb}(255,0,0)"
+      },
+      {
+        "type": "expression",
+        "id": "121149",
+        "folderId": "121145",
+        "color": "#000000",
+        "latex": "L_{aranja}=\\operatorname{rgb}(255,127,0)"
+      },
+      {
+        "type": "expression",
+        "id": "121150",
+        "folderId": "121145",
+        "color": "#c74440",
+        "latex": "A_{marelo}=\\operatorname{rgb}(255,255,0)"
+      },
+      {
+        "type": "expression",
+        "id": "121151",
+        "folderId": "121145",
+        "color": "#2d70b3",
+        "latex": "V_{erde}=\\operatorname{rgb}(0,255,0)"
+      },
+      {
+        "type": "expression",
+        "id": "121152",
+        "folderId": "121145",
+        "color": "#388c46",
+        "latex": "A_{zul}=\\operatorname{rgb}(0,0,255)"
+      },
+      {
+        "type": "expression",
+        "id": "121153",
+        "folderId": "121145",
+        "color": "#6042a6",
+        "latex": "A_{nil}=\\operatorname{rgb}(75,0,130)"
+      },
+      {
+        "type": "expression",
+        "id": "121154",
+        "folderId": "121145",
+        "color": "#000000",
+        "latex": "V_{ioleta}=\\operatorname{rgb}(148,0,211)"
+      },
+      {
+        "type": "expression",
+        "id": "483",
+        "folderId": "121145",
+        "color": "#6042a6",
+        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le3.75^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge3.5^{2}\\right\\}",
+        "colorLatex": "V_{ermelho}",
+        "fillOpacity": "D_{iluvio}-4",
+        "lineOpacity": "0"
+      },
+      {
+        "type": "expression",
+        "id": "121156",
+        "folderId": "121145",
+        "color": "#6042a6",
+        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le3.5^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge3.25^{2}\\right\\}",
+        "colorLatex": "L_{aranja}",
+        "fillOpacity": "D_{iluvio}-4",
+        "lineOpacity": "0"
+      },
+      {
+        "type": "expression",
+        "id": "121155",
+        "folderId": "121145",
+        "color": "#6042a6",
+        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le3.25^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge3^{2}\\right\\}",
+        "colorLatex": "A_{marelo}",
+        "fillOpacity": "D_{iluvio}-4",
+        "lineOpacity": "0"
+      },
+      {
+        "type": "expression",
+        "id": "484",
+        "folderId": "121145",
+        "color": "#fa7e19",
+        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le3.00^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge2.75^{2}\\right\\}",
+        "colorLatex": "V_{erde}",
+        "fillOpacity": "D_{iluvio}-4",
+        "lineOpacity": "0"
+      },
+      {
+        "type": "expression",
+        "id": "480",
+        "folderId": "121145",
+        "color": "#388c46",
+        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le2.75^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge2.5^{2}\\right\\}",
+        "colorLatex": "A_{zul}",
+        "fillOpacity": "D_{iluvio}-4",
+        "lineOpacity": "0"
+      },
+      {
+        "type": "expression",
+        "id": "482",
+        "folderId": "121145",
+        "color": "#c74440",
+        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le2.50^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge2.25^{2}\\right\\}",
+        "colorLatex": "A_{nil}",
+        "fillOpacity": "D_{iluvio}-4",
+        "lineOpacity": "0"
+      },
+      {
+        "type": "expression",
+        "id": "481",
+        "folderId": "121145",
+        "color": "#2d70b3",
+        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le2.25^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge2.^{2}\\right\\}",
+        "colorLatex": "V_{ioleta}",
+        "fillOpacity": "D_{iluvio}-4",
+        "lineOpacity": "0"
+      },
+      {
+        "type": "expression",
+        "id": "475",
+        "folderId": "121145",
+        "color": "#388c46",
+        "latex": "y\\le-\\left(\\frac{\\left(x+1\\right)}{2}\\right)^{2}",
+        "fillOpacity": "H\\left(D_{iluvio}-3\\right)",
+        "lineOpacity": "0"
       },
       {
         "type": "expression",
@@ -152,54 +285,6 @@
           "min": "-4",
           "max": "4"
         }
-      },
-      {
-        "type": "expression",
-        "id": "483",
-        "color": "#6042a6",
-        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le3.25^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge3^{2}\\right\\}",
-        "fillOpacity": "D_{iluvio}-4",
-        "lineOpacity": "0"
-      },
-      {
-        "type": "expression",
-        "id": "484",
-        "color": "#fa7e19",
-        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le3.^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge2.75^{2}\\right\\}",
-        "fillOpacity": "D_{iluvio}-4",
-        "lineOpacity": "0"
-      },
-      {
-        "type": "expression",
-        "id": "480",
-        "color": "#388c46",
-        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le2.75^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge2.5^{2}\\right\\}",
-        "fillOpacity": "D_{iluvio}-4",
-        "lineOpacity": "0"
-      },
-      {
-        "type": "expression",
-        "id": "482",
-        "color": "#c74440",
-        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le2.5^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge2.25^{2}\\right\\}",
-        "fillOpacity": "D_{iluvio}-4",
-        "lineOpacity": "0"
-      },
-      {
-        "type": "expression",
-        "id": "481",
-        "color": "#2d70b3",
-        "latex": "\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\le2.25^{2}\\left\\{y>0\\right\\}\\left\\{\\left(x+1\\right)^{2}+\\left(y\\right)^{2}\\ge2.^{2}\\right\\}",
-        "fillOpacity": "D_{iluvio}-4",
-        "lineOpacity": "0"
-      },
-      {
-        "type": "expression",
-        "id": "475",
-        "color": "#388c46",
-        "latex": "y\\le-\\left(\\frac{\\left(x+1\\right)}{2}\\right)^{2}",
-        "fillOpacity": "H\\left(D_{iluvio}-3\\right)",
-        "lineOpacity": "0"
       },
       {
         "type": "expression",
@@ -293,7 +378,7 @@
         "type": "expression",
         "id": "7",
         "color": "#2d70b3",
-        "latex": "d=-0.354",
+        "latex": "d=-0.333",
         "hidden": true,
         "slider": {
           "hardMin": true,
@@ -308,7 +393,7 @@
         "type": "expression",
         "id": "4",
         "color": "#6042a6",
-        "latex": "w=1.408",
+        "latex": "w=1.958",
         "hidden": true,
         "slider": {
           "hardMin": true,
@@ -323,7 +408,7 @@
         "type": "expression",
         "id": "6",
         "color": "#c74440",
-        "latex": "c=1.57",
+        "latex": "c=5",
         "hidden": true,
         "slider": {
           "hardMin": true,
@@ -492,12 +577,13 @@
         "type": "expression",
         "id": "144",
         "color": "#2d70b3",
-        "latex": "t=4.5",
+        "latex": "t=9.4",
         "hidden": true,
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 2000,
+          "playDirection": -1,
           "isPlaying": true,
           "min": "0",
           "max": "12"
@@ -507,11 +593,12 @@
         "type": "expression",
         "id": "128",
         "color": "#000000",
-        "latex": "a=-3.106",
+        "latex": "a=-3.594",
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 2666.6666666666665,
+          "playDirection": -1,
           "isPlaying": true,
           "min": "-4",
           "max": "-3"

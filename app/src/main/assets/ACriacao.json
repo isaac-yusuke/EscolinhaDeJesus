@@ -4,9 +4,9 @@
   "graph": {
     "viewport": {
       "xmin": -6.686983858087845,
-      "ymin": -4.571122188791931,
+      "ymin": -3.6143566389209907,
       "xmax": 6.319637752842687,
-      "ymax": 8.824719090811723
+      "ymax": 6.867953540940786
     },
     "showGrid": false,
     "showXAxis": false,
@@ -20,8 +20,8 @@
     "__v12ViewportLatexStash": {
       "xmin": "-6.686983858087845",
       "xmax": "6.319637752842687",
-      "ymin": "-5.571122188791931",
-      "ymax": "8.824719090811723"
+      "ymin": "-3.6143566389209907",
+      "ymax": "6.867953540940786"
     }
   },
   "expressions": {
@@ -30,6 +30,116 @@
         "type": "text",
         "id": "108",
         "text": "No princípio Deus criou os céus e a terra.\n\nGênesis 1:1"
+      },
+      {
+        "type": "folder",
+        "id": "121189",
+        "title": "Arco íris"
+      },
+      {
+        "type": "expression",
+        "id": "121192",
+        "folderId": "121189",
+        "color": "#2d70b3",
+        "latex": "V_{ermelho}=\\operatorname{rgb}(255,0,0)"
+      },
+      {
+        "type": "expression",
+        "id": "121193",
+        "folderId": "121189",
+        "color": "#388c46",
+        "latex": "L_{aranja}=\\operatorname{rgb}(255,127,0)"
+      },
+      {
+        "type": "expression",
+        "id": "121194",
+        "folderId": "121189",
+        "color": "#6042a6",
+        "latex": "A_{marelo}=\\operatorname{rgb}(255,255,0)"
+      },
+      {
+        "type": "expression",
+        "id": "121195",
+        "folderId": "121189",
+        "color": "#000000",
+        "latex": "V_{erde}=\\operatorname{rgb}(0,255,0)"
+      },
+      {
+        "type": "expression",
+        "id": "121196",
+        "folderId": "121189",
+        "color": "#c74440",
+        "latex": "A_{zul}=\\operatorname{rgb}(0,0,255)"
+      },
+      {
+        "type": "expression",
+        "id": "121197",
+        "folderId": "121189",
+        "color": "#2d70b3",
+        "latex": "A_{nil}=\\operatorname{rgb}(75,0,130)"
+      },
+      {
+        "type": "expression",
+        "id": "121198",
+        "folderId": "121189",
+        "color": "#388c46",
+        "latex": "V_{ioleta}=\\operatorname{rgb}(148,0,211)"
+      },
+      {
+        "type": "expression",
+        "id": "398",
+        "folderId": "121189",
+        "color": "#c74440",
+        "latex": "x^{2}+y^{2}\\le8^{2}\\left\\{x^{2}+y^{2}>7.5^{2}\\right\\}\\left\\{y<17\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>0\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}",
+        "colorLatex": "V_{ermelho}"
+      },
+      {
+        "type": "expression",
+        "id": "121199",
+        "folderId": "121189",
+        "color": "#c74440",
+        "latex": "x^{2}+y^{2}\\le7.5^{2}\\left\\{x^{2}+y^{2}>7^{2}\\right\\}\\left\\{y<16\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>0\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}",
+        "colorLatex": "L_{aranja}"
+      },
+      {
+        "type": "expression",
+        "id": "121191",
+        "folderId": "121189",
+        "color": "#c74440",
+        "latex": "x^{2}+y^{2}\\le7^{2}\\left\\{x^{2}+y^{2}>6.5^{2}\\right\\}\\left\\{y<15\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>0\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}",
+        "colorLatex": "A_{marelo}"
+      },
+      {
+        "type": "expression",
+        "id": "121190",
+        "folderId": "121189",
+        "color": "#c74440",
+        "latex": "x^{2}+y^{2}\\le6.5^{2}\\left\\{x^{2}+y^{2}>6^{2}\\right\\}\\left\\{y<14\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>0\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}",
+        "colorLatex": "V_{erde}"
+      },
+      {
+        "type": "expression",
+        "id": "400",
+        "folderId": "121189",
+        "color": "#2d70b3",
+        "latex": "x^{2}+y^{2}\\le6^{2}\\left\\{x^{2}+y^{2}>5.5^{2}\\right\\}\\left\\{y<13\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}\\left\\{y>0\\right\\}",
+        "colorLatex": "A_{zul}"
+      },
+      {
+        "type": "expression",
+        "id": "399",
+        "folderId": "121189",
+        "color": "#388c46",
+        "latex": "x^{2}+y^{2}\\le5.5^{2}\\left\\{x^{2}+y^{2}>5^{2}\\right\\}\\left\\{y<12\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}\\left\\{y>0\\right\\}",
+        "colorLatex": "A_{nil}"
+      },
+      {
+        "type": "expression",
+        "id": "401",
+        "folderId": "121189",
+        "color": "#6042a6",
+        "latex": "x^{2}+y^{2}\\le5^{2}\\left\\{x^{2}+y^{2}>4.5^{2}\\right\\}\\left\\{y<12\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>h_{2}\\left(x\\right)\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}",
+        "colorLatex": "V_{ioleta}"
       },
       {
         "type": "expression",
@@ -72,30 +182,6 @@
         "id": "411",
         "color": "#000000",
         "latex": "\\left\\{D_{ia}=7\\right\\}\\left(\\frac{\\left(x-\\left[3,3,4,4.5\\right]\\right)}{\\left[.25,.25,.25,.125\\right]}\\right)^{2}+\\left(\\frac{\\left(y-\\left[2.625,2.875,2.75,2.75\\right]\\right)}{\\left[.125,.125,.25,.25\\right]}\\right)^{2}=1^{2}\\left\\{x>\\left[3,3,4,0\\right]\\right\\}"
-      },
-      {
-        "type": "expression",
-        "id": "398",
-        "color": "#c74440",
-        "latex": "x^{2}+y^{2}\\le6.5^{2}\\left\\{x^{2}+y^{2}>6^{2}\\right\\}\\left\\{y<13\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>0\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}"
-      },
-      {
-        "type": "expression",
-        "id": "400",
-        "color": "#2d70b3",
-        "latex": "x^{2}+y^{2}\\le6^{2}\\left\\{x^{2}+y^{2}>5.5^{2}\\right\\}\\left\\{y<12\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}\\left\\{y>0\\right\\}"
-      },
-      {
-        "type": "expression",
-        "id": "399",
-        "color": "#388c46",
-        "latex": "x^{2}+y^{2}\\le5.5^{2}\\left\\{x^{2}+y^{2}>5^{2}\\right\\}\\left\\{y<12\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}\\left\\{y>0\\right\\}"
-      },
-      {
-        "type": "expression",
-        "id": "401",
-        "color": "#6042a6",
-        "latex": "x^{2}+y^{2}\\le5^{2}\\left\\{x^{2}+y^{2}>4.5^{2}\\right\\}\\left\\{y<12\\left(D_{ia}-6.5\\right)\\right\\}\\left\\{y>h_{2}\\left(x\\right)\\right\\}\\left\\{y>f\\left(x\\right)\\right\\}"
       },
       {
         "type": "expression",
@@ -176,12 +262,13 @@
         "type": "expression",
         "id": "4",
         "color": "#6042a6",
-        "latex": "w=1.792",
+        "latex": "w=1.175",
         "hidden": true,
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "animationPeriod": 2000,
+          "playDirection": -1,
           "isPlaying": true,
           "min": "1",
           "max": "2"
@@ -191,7 +278,7 @@
         "type": "expression",
         "id": "6",
         "color": "#c74440",
-        "latex": "c=1.283",
+        "latex": "c=4.79",
         "hidden": true,
         "slider": {
           "hardMin": true,
